@@ -34,7 +34,8 @@ function initMap() {
         zoom: 16,
         center: bangalore,
     });
-    const image = window.location.origin + "/dist/assets/images/marker-icon.png";
+    const image = window.location.origin + "keiclinic/dist/assets/images/marker-icon.png";
+    console.log(image);
     // Add a marker at the center of the map.
     addMarker(bangalore, map, image);
 }
