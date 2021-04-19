@@ -63,7 +63,7 @@
             box-shadow: 7.5px 4.9px 29px 0 rgba(95, 82, 69, 0.11);
             background-color: #fff;
             margin: auto;
-            position: absolute;
+            // position: absolute;
             z-index: 2;
             left: 0;
             right: 0;
@@ -168,6 +168,102 @@
                         }
                     }
                 }                
+            }
+        }
+        #header_subpage {
+            &.is-show {
+                width: 100%;
+                position: fixed;
+                top: 0;
+                z-index: 99;
+            }
+            .hd-sub__inner {
+                @include dlflex;
+                background-color: #b88148;
+                justify-content: space-between;
+                align-items: center;
+                // padding: 35px 0 35px 60px;
+                .hd-sub__right {
+                    @include dlflex;
+                    align-items: center;
+                }
+                .hd-sub__nav {
+                    @include dlflex;
+                    .hd-sub__item {
+                        padding: 0 32px;
+                        &:first-of-type {
+                            padding-left: 0;
+                        }
+                        &:last-of-type {
+                            padding-right: 0;
+                        }
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+                .hd-sub__contact {
+                    @include dlflex;
+                    // align-items: center;
+                    .hd-sub__item {
+                        a {
+                            color: #fff;
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                        &.hd-sub-phone {
+                            // max-width: 300px;
+                            width: 300px;
+                            background-color: #e4ad34;
+                            font-size: 28px;
+                            font-weight: bold;
+                            line-height: 1;
+                            letter-spacing: 1.4px;
+                            // text-align: center;
+                            position: relative;
+                            padding-left: 29px;
+                            @include dlflex;
+                            align-items: center;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                margin: auto;
+                                left: 0;
+                                background: url('../images/phone-call-top.png') no-repeat;
+                                width: 24px;
+                                height: 24px;
+                            }
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                margin: auto;
+                                left: 35px;
+                                width: 1px;
+                                height: 25px;
+                                background: rgba(255, 255, 255, 0.5);
+                            }
+                        }
+                        .calendar {
+                            @include dlflex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            line-height: 1;
+                            span {
+                                margin-top: 6px;
+                            }
+                        }
+                        &:last-of-type {
+                            max-width: 120px;
+                            width: 100%;
+                        }
+                    }
+                }
             }
         }
     }
