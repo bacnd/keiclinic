@@ -652,7 +652,7 @@ footer.footer .ft-top .ft-left__inner {
 }
 footer.footer .ft-top .ft-left .logo-ft {
   margin-bottom: 58px;
-  display: block;
+  padding-left: 128px;
 }
 footer.footer .ft-top .ft-left .ft-info {
   margin-bottom: 49px;
