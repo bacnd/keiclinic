@@ -30,6 +30,7 @@ body {
 
     /* Non standard for WebKit */
     word-break: break-word;
+    @include resizefont(12px, 24px);
     @include fixIE {
         -ms-word-break: inherit;
         word-break: inherit;
@@ -134,8 +135,8 @@ output:-moz-ui-invalid {
     max-width: 1200px;
     margin: 0 auto;
     @include max_768 {
-        padding-left: vw(40px);
-        padding-right: vw(40px);
+        padding-left: vw(30px);
+        padding-right: vw(30px);
     }
 }
 

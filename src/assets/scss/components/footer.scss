@@ -4,6 +4,9 @@ footer {
         .ft-top {
             background-color: #fbfaf7;
             @include dlflex;
+            @include max_768 {
+                flex-direction: column;
+            }
             .ft-left {
                 width: 50%;
                 padding-bottom: 45px;
@@ -153,6 +156,9 @@ footer {
                 @include dlflex;
                 justify-content: center;
                 padding-bottom: 30px;
+                @include max_768 {
+                    flex-direction: column;
+                }
                 .ft-nav__item {
                     padding: 0 22px;
                     a {
@@ -176,6 +182,7 @@ footer {
             position: fixed;
             bottom: 140px;
             right: 167px;
+            z-index: 9;
             a {
                 &:hover {
                     opacity: 1;
