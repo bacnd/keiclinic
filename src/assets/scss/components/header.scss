@@ -35,6 +35,7 @@
                 margin: auto;
                 display: block;
                 max-width: 1049px;
+                width: 60vw;
             }
         }
         .hd-menu {
@@ -63,7 +64,7 @@
             box-shadow: 7.5px 4.9px 29px 0 rgba(95, 82, 69, 0.11);
             background-color: #fff;
             margin: auto;
-            // position: absolute;
+            position: absolute;
             z-index: 2;
             left: 0;
             right: 0;
@@ -171,9 +172,11 @@
             }
         }
         #header_subpage {
+            position: fixed;
+            top: -200px;
+            @include transition();
             &.is-show {
                 width: 100%;
-                position: fixed;
                 top: 0;
                 z-index: 99;
             }
@@ -183,6 +186,9 @@
                 justify-content: space-between;
                 align-items: center;
                 // padding: 35px 0 35px 60px;
+                .hd-sub__logo {
+                    margin-left: 3.12500%;
+                }
                 .hd-sub__right {
                     @include dlflex;
                     align-items: center;
@@ -204,7 +210,9 @@
                 }
                 .hd-sub__contact {
                     @include dlflex;
-                    // align-items: center;
+                    align-items: center;
+                    width: 504px;
+                    margin-left: 60px;
                     .hd-sub__item {
                         a {
                             color: #fff;
@@ -222,16 +230,19 @@
                             letter-spacing: 1.4px;
                             // text-align: center;
                             position: relative;
-                            padding-left: 29px;
+                            padding-left: 76px;
                             @include dlflex;
                             align-items: center;
+                            padding-top: 46px;
+                            padding-bottom: 46px;
+                            margin-left: 60px;
                             &::before {
                                 content: '';
                                 position: absolute;
                                 top: 0;
                                 bottom: 0;
                                 margin: auto;
-                                left: 0;
+                                left: 28px;
                                 background: url('../images/phone-call-top.png') no-repeat;
                                 width: 24px;
                                 height: 24px;
@@ -242,7 +253,7 @@
                                 top: 0;
                                 bottom: 0;
                                 margin: auto;
-                                left: 35px;
+                                left: 63px;
                                 width: 1px;
                                 height: 25px;
                                 background: rgba(255, 255, 255, 0.5);

@@ -151,16 +151,23 @@
         tr {
             border: 1px solid #d4d4d4;
             td {
-                padding: 21px;
+                padding: vw(30px) 21px;
+                @include min_769 {
+                    padding: 21px;
+                }
                 &:first-of-type {
-                    width: 244px;
+                    width: vw(167px);
                     background-color: #f7f2e9;
                     font-size: 24px;
                     font-weight: bold;
                     letter-spacing: 1.2px;
                     color: #715c43;
-                    padding-left: 72px;
+                    padding-left: vw(30px);
                     @include resizefont(12px, 24px);
+                    @include min_769 {
+                        width: 244px;
+                        padding-left: 72px;
+                    }
                 }
                 &:last-of-type {
                     padding-left: 63px;
@@ -188,7 +195,7 @@
             // max-width: 935px;
             width: 100%;
             background-color: #f7f2e9;
-            padding: 41px 0 40px 41px;
+            padding: 41px vw(20px) 40px vw(30px);
             @include min_769 {
                 padding: 41px 245px 40px 41px;
                 margin: 44px 309px 0 -40px;
@@ -298,10 +305,19 @@
                 }
             }
             &-1 {
+                &__img {
+                    @include max_768 {
+                        margin-right: vw(30px);
+                    }
+                }
                 .point-content {
                     color: #fff;
-                    padding-left: 40px;
-                    padding-top: 66px;
+                    padding-left: vw(30px);
+                    padding-top: vw(40px);
+                    @include min_769 {
+                        padding-left: 40px;
+                        padding-top: 66px;
+                    }
                     .point__title {
                     }
                     .point__txt {
@@ -328,24 +344,37 @@
                 &__img {
                     // position: absolute;
                     // right: 0;
-                    width: calc(50% + 83px);
-                    order: 1;
-                    margin-left: -91px;
+                    @include min_769 {
+                        width: calc(50% + 83px);
+                        margin-left: -91px;
+                        order: 1;
+                    }
                 }
                 .point-content {
                     z-index: 1;
+                    // padding-right: 49.8%;
                     padding-left: 22.5%;
                     padding-top: 57px;
-                    // padding-right: 49.8%;
+                    @include max_768 {
+                        padding-left: vw(30px);
+                        padding-top: vw(19px);
+                        padding-right: vw(30px);
+                    }
                     .point__num {
-                        max-width: 527px;
+                        @include min_769 {
+                            max-width: 527px;
+                        }
                     }
                     .point__title {
                         color: #715c43;
-                        max-width: 527px;
+                        @include min_769 {
+                            max-width: 527px;
+                        }
                     }
                     .point__txt {
-                        max-width: 527px;
+                        @include min_769 {
+                            max-width: 527px;
+                        }
                     }
                     .btn-more {
                         margin-top: 35px;
@@ -360,8 +389,10 @@
                 // padding: 44px 0 161px calc(50% - 14px);
                 margin-top: 130px;
                 &__img {
-                    width: calc(50% + 395px);
                     left: 0;
+                    @include min_769 {
+                        width: calc(50% + 395px);
+                    }
                     img {
                         width: 100%;
                     }
@@ -371,18 +402,31 @@
                     // width: calc(50% + 16px);
                     // position: absolute;
                     // right: 0;
-                    margin-left: -21.35%;
-                    padding-top: 45px;
+                    @include min_769 {
+                        margin-left: -21.35%;
+                        padding-top: 45px;
+                    }
+                    @include max_768 {
+                        padding-left: vw(30px);
+                        margin-top: vw(-15px);
+                        padding-right: vw(30px);
+                    }
                     .point__num {
-                        max-width: 560px;
+                        @include min_769 {
+                            max-width: 560px;
+                        }
 
                     }
                     .point__title {
                         color: #715c43;
-                        max-width: 560px;
+                        @include min_769 {
+                            max-width: 560px;
+                        }
                     }
                     .point__txt {
-                        max-width: 560px;
+                        @include min_769 {
+                            max-width: 560px;
+                        }
                         letter-spacing: 0.9px;
                     }
                 }
@@ -392,9 +436,10 @@
                 margin-top: 132px;
                 &__img {
                     // position: absolute;
-                    width: calc(50% - 13px);
-                    right: 0;
-                    order: 1;
+                    @include min_769 {
+                        width: calc(50% - 13px);
+                        order: 1;
+                    }
                     img {
                         width: 100%;
                     }
@@ -405,6 +450,12 @@
                     padding-left: 22.5%;
                     padding-top: 60px;
                     // padding-right: 49.8%;
+                    @include max_768 {
+                        margin-top: vw(-35px);
+                        padding-top: 0;
+                        padding-left: vw(30px);
+                        padding-right: vw(30px);
+                    }
                     .point__num {
 
                     }
@@ -412,7 +463,9 @@
                         color: #715c43;
                     }
                     .point__txt {
-                        max-width: 560px;
+                        @include min_769 {
+                            max-width: 560px;
+                        }
                     }
                 }
             }
@@ -422,15 +475,21 @@
 
 .box-service {
     background: url('../images/bg-service.png') center no-repeat;
-    padding-top: 244px;
     padding-bottom: 187px;
-    margin-top: 202px;
+    @include min_769 {
+        margin-top: 202px;
+        padding-top: 244px;
+    }
     .section__title {
         .section__title-jp {
-            font-size: 30px;
-            margin-left: 31px;
+            margin-left: vw(31px);
             position: relative;
-            padding-left: 30px;
+            padding-left: vw(30px);
+            @include min_769 {
+                font-size: 30px;
+                padding-left: 30px;
+                margin-left: 31px;
+            }
             &::before {
                 content: '';
                 position: absolute;
@@ -438,7 +497,7 @@
                 top: 0;
                 bottom: 3px;
                 margin: auto;
-                height: calc(100% - 14px);
+                height: calc(100% - 1.8666666667vw);
                 width: 1px;
                 background-color: #715c43;
             }
@@ -491,22 +550,42 @@
 
 .box-calendar {
     padding-top: 80px;
-    padding-bottom: 86px;
+    padding-bottom: vw(50px);
+    @include min_769 {
+        padding-bottom: 86px;
+    }
     &__inner {
         @include dlflex;
         align-items: center;
         justify-content: space-between;
         @include max_768 {
             flex-direction: column;
+            align-items: baseline;
+        }
+        .calendar-right {
+            @include max_768 {
+                margin-top: vw(60px);
+                width: 100%;
+            }
+            .calendar__img {
+                img {
+                    width: 100%;
+                }
+            }
         }
     }
 }
 
 .box-appointment {
-    margin-top: 204px;
+    margin-top: vw(100px);
     background: url('../images/bg-section_08.jpg') center no-repeat;
     background-size: cover;
-    padding-bottom: 149px;
+    padding-bottom: vw(100px);
+    padding-top: vw(100px);
+    @include min_769 {
+        margin-top: 204px;
+        padding-bottom: 149px;
+    }
     &__inner {
         @include dlflex;
         text-align: center;
@@ -515,25 +594,45 @@
         }
         .appointment {
             &__item {
-                max-width: 585px;
                 width: 100%;
                 // height: 421px;
-                padding: 10px;
+                padding: vw(10px);
                 box-shadow: 7.5px 4.9px 29px 0 rgba(95, 82, 69, 0.11);
                 background-color: #f7f2e9f2;
-                margin-top: -118px;
+                height: vw(450px);
+                @include min_769 {
+                    margin-top: -118px;
+                    max-width: 585px;
+                    padding: 10px;
+                }
                 .item-boder {
                     border: solid 1px #e3a621;
                     height: 100%;
-                    padding: 40px 64px 47px;
+                    padding: vw(30px) vw(50px) vw(33px);
+                    @include min_769 {
+                        padding: 40px 64px 47px;
+                    }
                 }
                 & + .appointment__item {
-                    margin-left: 30px;
+                    @include min_769 {
+                        margin-left: 30px;
+                    }
+                    @include max_768 {
+                        margin-top: vw(53px);
+                    }
+                }
+                &:last-of-type {
+                    .appointment__txt {
+                        margin-top: vw(42px);
+                    }
                 }
             }
             &__icon {
-                height: 105px;
+                height: vw(109px);
                 @include dlflexcenter;
+                @include min_769 {
+                    height: 105px;
+                }
             }
             &__title {
                 font-size: 30px;
@@ -541,9 +640,14 @@
                 line-height: 1.13;
                 letter-spacing: 1.5px;
                 color: #715c43;
-                margin-top: 24px;
                 position: relative;
-                padding-bottom: 25px;
+                margin-top: vw(24px);
+                padding-bottom: vw(25px);
+                @include resizefont(20px, 40px);
+                @include min_769 {
+                    margin-top: 24px;
+                    padding-bottom: 25px;
+                }
                 &::after {
                     content: '';
                     position: absolute;
@@ -551,15 +655,25 @@
                     right: 0;
                     bottom: 0;
                     margin: auto;
-                    width: 50px;
-                    height: 4px;
+                    width: vw(60px);
+                    height: vw(3px);
                     background-color: #e3a621;
+                    @include min_769 {
+                        width: 50px;
+                        height: 4px;
+                    }
                 }
             }
             &__txt {
-                line-height: 1.89;
+                line-height: 1.81;
                 letter-spacing: -0.6px;
-                margin-top: 23px;
+                margin-top: vw(34px);
+                @include min_769 {
+                    margin-top: 23px;
+                }
+                @include min_769 {
+                    line-height: 1.89;
+                }
             }
         }
     }

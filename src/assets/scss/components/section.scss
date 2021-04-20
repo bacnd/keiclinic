@@ -15,6 +15,9 @@
         font-weight: bold;
         letter-spacing: 1.2px;
         color: #715c43;
-        margin-top: -3px;
+        @include resizefont(12px, 24px);
+        @include min_769 {
+            margin-top: -3px;
+        }
     }
 }
