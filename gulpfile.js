@@ -24,13 +24,13 @@ const cleanFonts = () => {
   return del(['dist/assets/fonts']);
 }
 
-const cleanStyles = () => {
-  return del(['dist/assets/css']);
-}
+// const cleanStyles = () => {
+//   return del(['dist/assets/css']);
+// }
 
-const cleanJavascripts = () => {
-  return del(['dist/assets/js']);
-}
+// const cleanJavascripts = () => {
+//   return del(['dist/assets/js']);
+// }
 
 // css task
 const css = () => {

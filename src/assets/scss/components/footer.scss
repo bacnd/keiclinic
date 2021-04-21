@@ -4,57 +4,115 @@ footer {
         .ft-top {
             background-color: #fbfaf7;
             @include dlflex;
+            @include max_768 {
+                flex-direction: column;
+            }
             .ft-left {
-                width: 50%;
-                padding-bottom: 45px;
-                padding-top: 102px;
+                width: 100%;
+                padding-bottom: vw(97px);
+                padding-top: vw(145px);
+                @include min_769 {
+                    width: 50%;
+                    padding-top: 102px;
+                    padding-bottom: 45px;
+                }
                 &__inner {
-                    max-width: 600px;
                     width: 100%;
                     margin-left: auto;
+                    @include min_769 {
+                        max-width: 600px;
+                    }
+                    @include max_768 {
+                        padding-left: vw(30px);
+                        padding-right: vw(30px);
+                    }
                 }
                 .logo-ft {
                     margin-bottom: 58px;
                     padding-left: 128px;
+                    @include max_768 {
+                        margin-bottom: vw(41px);
+                        padding-left: 0;
+                        text-align: center;
+                        img {
+                            width: vw(346px);
+                        }
+                    }
                 }
                 .ft-info {
-                    margin-bottom: 49px;
+                    margin-bottom: vw(49px);
+                    @include min_769 {
+                        margin-bottom: 49px;
+                    }
+                    &:nth-of-type(2) {
+                        @include max_768 {
+                            margin-bottom: vw(64px);
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        @include max_768 {
+                            margin-bottom: vw(58px);
+                        }
+                    }
                     &__title {
                         font-family: $ff-watchwordbold;
                         font-size: 40px;
                         line-height: 1;
-                        letter-spacing: 4px;
+                        letter-spacing: vw(6px);
                         color: #c38a4c;
+                        @include resizefont(30px, 60px);
+                        @include min_769 {
+                            letter-spacing: 4px;
+                        }
                         span {
                             font-size: 18px;
-                            margin-left: 32px;
+                            margin-left: vw(25px);
                             position: relative;
-                            padding-left: 20px;
+                            padding-left: vw(21px);
                             font-weight: bold;
                             color: #715c43;
+                            @include resizefont(12px, 24px);
+                            letter-spacing: vw(1.2px);
+                            @include min_769 {
+                                padding-left: 20px;
+                                margin-left: 32px;
+                                letter-spacing: 0.9px;
+                            }
                             &::before {
                                 content: "";
                                 position: absolute;
                                 left: 0;
-                                top: 0;
+                                top: vw(4px);
                                 bottom: 6px;
                                 margin: auto;
-                                height: calc(100% - 9px);
+                                height: calc(100% - 1.2vw);
                                 width: 1px;
                                 background-color: #715c43;
+                                @include min_769 {
+                                    top: 0;
+                                    height: calc(100% - 9px);
+                                }
                             }
                         }
                     }
                     .phone-ins {
-                        margin-top: 22px;
+                        margin-top: vw(30px);
+                        @include min_769 {
+                            margin-top: 22px;
+                        }
                         li {
                             position: relative;
                             &.phone {
                                 font-size: 40px;
                                 font-weight: bold;
                                 line-height: 1;
-                                letter-spacing: 2px;
-                                padding-left: 52px;
+                                letter-spacing: vw(1.5px);
+                                padding-left: vw(52px);
+                                @include resizefont(20px, 40px);
+                                @include min_769 {
+                                    letter-spacing: 2px;
+                                    padding-left: 52px;
+                                }
                                 &::before {
                                     content: '';
                                     position: absolute;
@@ -62,9 +120,14 @@ footer {
                                     bottom: 0;
                                     left: 0;
                                     margin: auto;
-                                    width: 30px;
-                                    height: 30px;
+                                    width: vw(30px);
+                                    height: vw(30px);
                                     background: url('../images/phone-call.png') no-repeat;
+                                    background-size: contain;
+                                    @include min_769 {
+                                        width: 30px;
+                                        height: 30px;
+                                    }
                                 }
                             }
                             &.ins {
@@ -72,8 +135,13 @@ footer {
                                 font-weight: bold;
                                 line-height: 1;
                                 letter-spacing: 1.5px;
-                                padding-left: 50px;
-                                margin-top: 21px;
+                                padding-left: vw(50px);
+                                margin-top: vw(21px);
+                                @include resizefont(15px, 30px);
+                                @include min_769 {
+                                    margin-top: 21px;
+                                    padding-left: 50px;
+                                }
                                 &::before {
                                     content: '';
                                     position: absolute;
@@ -81,15 +149,28 @@ footer {
                                     bottom: 0;
                                     left: 0;
                                     margin: auto;
-                                    width: 30px;
-                                    height: 30px;
+                                    width: vw(30px);
+                                    height: vw(30px);
                                     background: url('../images/instagram.png') no-repeat;
+                                    background-size: contain;
+                                    @include min_769 {
+                                        width: 30px;
+                                        height: 30px;
+                                    }
                                 }
                             }
                         }
                     }
                     .shedule-info {
-                        margin-top: 30px;
+                        margin-top: vw(40px);
+                        @include min_769 {
+                            margin-top: 30px;
+                        }
+                        img {
+                            @include max_768 {
+                                width: 100%;
+                            }
+                        }
                     }
                     .access-address {
                         font-size: 24px;
@@ -97,7 +178,11 @@ footer {
                         line-height: 1.42;
                         letter-spacing: 1.2px;
                         color: #2e2e2e;
-                        margin-top: 29px;
+                        margin-top: vw(29px);
+                        @include resizefont(12px, 24px);
+                        @include min_769 {
+                            margin-top: 29px;
+                        }
                         span {
                             font-weight: normal;
                         }
@@ -105,15 +190,23 @@ footer {
                     .access-guide {
                         @include dlflex;
                         align-items: center;
-                        margin-top: 15px;
+                        margin-top: vw(15px);
+                        @include min_769 {
+                            margin-top: 15px;
+                        }
                         p {
                             font-size: 24px;
                             line-height: 1.2;
                             letter-spacing: 1.2px;
                             color: #2e2e2e;
                             position: relative;
-                            margin-left: 21px;
-                            padding-left: 18px;
+                            margin-left: vw(20px);
+                            padding-left: vw(20px);
+                            @include resizefont(12px, 24px);
+                            @include min_769 {
+                                margin-left: 21px;
+                                padding-left: 18px;
+                            }
                             &::before {
                                 content: '';
                                 position: absolute;
@@ -129,6 +222,7 @@ footer {
                                 font-size: 40px;
                                 font-weight: bold;
                                 letter-spacing: 2px;
+                                @include resizefont(20px, 40px);
                             }
                         }
                     }
@@ -136,10 +230,13 @@ footer {
             }
             .ft-right {
                 width: 50%;
+                width: 100%;
+                @include min_769 {
+                    width: 50%;
+                }
                 #map {
-                    height: 100%;
-                    iframe {
-                        width: 100%;
+                    height: vw(800px);
+                    @include min_769 {
                         height: 100%;
                     }
                 }
@@ -148,13 +245,24 @@ footer {
         .ft-button {
             background-color: #715c43;
             text-align: center;
-            padding-top: 35px;
+            padding-top: vw(17px);
+            @include min_769 {
+                padding-top: 35px;
+            }
             .ft-nav {
                 @include dlflex;
                 justify-content: center;
                 padding-bottom: 30px;
+                @include max_768 {
+                    flex-direction: column;
+                    padding-bottom: 0;
+                }
                 .ft-nav__item {
                     padding: 0 22px;
+                    @include max_768 {
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                        padding: vw(17px) 0;
+                    }
                     a {
                         line-height: 1.89;
                         letter-spacing: 0.9px;
@@ -167,15 +275,24 @@ footer {
                 font-weight: 300;
                 letter-spacing: 0.8px;
                 color: rgba(255, 255, 255, 0.3);
-                border-top: 1px solid #ffffff4d;
-                padding-top: 20px;
-                padding-bottom: 22px;
+                padding-top: vw(49px);
+                padding-bottom: vw(52px);
+                @include resizefont(12px, 24px);
+                @include min_769 {
+                    border-top: 1px solid rgb(255 255 255 / 30%);
+                    padding-top: 20px;
+                    padding-bottom: 22px;
+                }
             }
         }
         #page_top {
             position: fixed;
             bottom: 140px;
             right: 167px;
+            z-index: 9;
+            @include max_768 {
+                display: none !important;
+            }
             a {
                 &:hover {
                     opacity: 1;

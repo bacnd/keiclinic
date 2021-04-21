@@ -1,16 +1,41 @@
 .box-section {
     .section__title {
         font-size: 80px;
-        letter-spacing: 8px;
+        letter-spacing: vw(6px);
         line-height: 1;
         color: #c38a4c;
         font-family: $ff-watchwordbold;
+        position: relative;
+        @include resizefont(40px, 80px);
+        @include min_769 {
+            letter-spacing: 8px;
+        }
+        @media screen and (max-width: 375px) {
+            letter-spacing: vw(0px);
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: -988px;
+            top: 0;
+            bottom: 8px;
+            margin: auto;
+            height: 1px;
+            background: #c38a4c;
+            width: 1000px;
+            @include max_768 {
+                content: none;
+            }
+        }
     }
     .section__title-jp {
         font-size: 24px;
         font-weight: bold;
         letter-spacing: 1.2px;
         color: #715c43;
-        margin-top: -3px;
+        @include resizefont(12px, 24px);
+        @include min_769 {
+            margin-top: -3px;
+        }
     }
 }
