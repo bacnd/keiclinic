@@ -34,6 +34,9 @@ footer {
                         margin-bottom: vw(41px);
                         padding-left: 0;
                         text-align: center;
+                        img {
+                            width: vw(346px);
+                        }
                     }
                 }
                 .ft-info {
@@ -276,7 +279,7 @@ footer {
                 padding-bottom: vw(52px);
                 @include resizefont(12px, 24px);
                 @include min_769 {
-                    border-top: 1px solid #ffffff4d;
+                    border-top: 1px solid rgb(255 255 255 / 30%);
                     padding-top: 20px;
                     padding-bottom: 22px;
                 }
