@@ -1,4 +1,5 @@
 $(function() {
+    
     var pageTop = $('#page_top');
     pageTop.hide();
   
@@ -60,11 +61,18 @@ $(function() {
 
     
     var $win = $(window),
-        $cloneNav = $('#header_subpage'),
+        $cloneNav = $('.home #header_subpage'),
         showClass = 'is-show',
         headHeight = $('#header').height(),
         boxFeature = $('.box-feature').offset().top;
     
+        var $kdwArea = $('.box-feature'),
+        kdwPos = $kdwArea.offset().top,
+        kdwHeight = $kdwArea.outerHeight();
+        var stopTop = kdwHeight - $win.height();
+        var $kdwBg = $('.our-three-commit'),
+        kdwBgHeight = $kdwBg.outerHeight();
+        
     $win.on('load scroll', function() {
         var value = $(this).scrollTop();
         if(value > headHeight) {
@@ -74,21 +82,27 @@ $(function() {
         }
 
         // if(value > boxFeature) {
-        //     $('#fix_bg').css({'position': 'fixed'});
+        //     $('.our-three-commit').css({'position': 'fixed'});
         // } else {
-        //     $('#fix_bg').css({'position': 'absolute'});
+        //     $('.our-three-commit').css({'position': 'absolute'});
         // }
+
+        if(value < boxFeature || kdwPos < value - stopTop - kdwBgHeight) {
+            $('.our-three-commit').css({'position': 'absolute'});
+        } else {
+            $('.our-three-commit').css({'position': 'fixed'});
+        }
     });
 
-    var $scl = $('#header_subpage'),
-        sclHeight = $scl.outerHeight();
+    // var $scl = $('#header_subpage'),
+    //     sclHeight = $scl.outerHeight();
 
-    var $kdwArea = $('.box-feature'),
-        kdwPos = $kdwArea.offset().top,
-        kdwHeight = $kdwArea.outerHeight();
+    // var $kdwArea = $('.box-feature'),
+    //     kdwPos = $kdwArea.offset().top,
+    //     kdwHeight = $kdwArea.outerHeight();
 
-    var $kdwBg = $('.our-three-commit'),
-        kdwBgHeight = $kdwBg.outerHeight();
+    // var $kdwBg = $('.our-three-commit'),
+    //     kdwBgHeight = $kdwBg.outerHeight();
 
     var classKdwAbs = 'kdw_abs',
         classKdwFix = 'kdw_fix',
@@ -100,36 +114,46 @@ $(function() {
         /* スクロール終わり：上からの位置 */
         defTop = '3%'; /* デフォルトの位置 */
 
-    $win.on('load scroll', function() {
+    // $win.on('load scroll', function() {
 
-        var value = $(this).scrollTop(),
-        scrollPos = $win.height() + value; /* スクロールの下の位置 */
+    //     var value = $(this).scrollTop(),
+    //     scrollPos = $win.height() + value; /* スクロールの下の位置 */
 
-        // 背景を固定する範囲までスクロールしたら
-        console.log('kdwBgHeight ' + (kdwPos + kdwHeight - kdwBgHeight));
-        console.log('scrollPos ' + scrollPos);
-        if(kdwPos + kdwBgHeight <= scrollPos) {
+    //     // 背景を固定する範囲までスクロールしたら
+    //     if(kdwPos + kdwBgHeight <= scrollPos) {
 
-            // こだわりエリアの底辺が見えたら
-            // if(kdwPos + kdwHeight - kdwBgHeight <= scrollPos) {
+    //         // こだわりエリアの底辺が見えたら
+    //         // if(kdwPos + kdwHeight - kdwBgHeight <= scrollPos) {
 
-            //     $kdwBg.removeClass(bgFix);
-            //     $kdwBg.removeClass(bgFirst);
-            //     $kdwBg.addClass(bgStop);
+    //         //     $kdwBg.removeClass(bgFix);
+    //         //     $kdwBg.removeClass(bgFirst);
+    //         //     $kdwBg.addClass(bgStop);
 
-            //     // こだわりエリアの底辺が見えるまで
-            // } else {
-                // $kdwBg.removeClass(bgStop);
-                $kdwBg.removeClass(bgFirst);
-                $kdwBg.addClass(bgFix);
-            // }
+    //         //     // こだわりエリアの底辺が見えるまで
+    //         // } else {
+    //             // $kdwBg.removeClass(bgStop);
+    //             $kdwBg.removeClass(bgFirst);
+    //             $kdwBg.addClass(bgFix);
+    //         // }
 
-        // 固定しない範囲
-        } else {
-            $kdwBg.removeClass(bgFix);
-            // $kdwBg.removeClass(bgStop);
-            $kdwBg.addClass(bgFirst);
-        }
+    //     // 固定しない範囲
+    //     } else {
+    //         $kdwBg.removeClass(bgFix);
+    //         // $kdwBg.removeClass(bgStop);
+    //         $kdwBg.addClass(bgFirst);
+    //     }
+    // });
+
+    
+});
+
+$(function() {
+    $(document).ready(function() {
+      AOS.init({
+        duration: 500,
+        offset: 200,
+        once: false
+      });
     });
 });
 
