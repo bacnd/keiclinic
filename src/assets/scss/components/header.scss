@@ -575,7 +575,7 @@
                         margin-left: 2%;
                     }
                     @media screen and (max-width: 1024px) and (min-width: 769px) {
-                        width: 43%;
+                        width: 35%;
                     }
                     @include max_768 {
                         width: 100%;
@@ -741,7 +741,9 @@
 .home {
     #header {
         #header_subpage {
-            top: -200px;
+            @include min_769 {
+                top: -200px;
+            }
         }
     }
 }
