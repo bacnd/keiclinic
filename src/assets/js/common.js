@@ -16,15 +16,25 @@ $(function() {
     });
 
     $('.slide_box').slick({
+        // autoplay: true,
+        // autoplaySpeed: 7000,
+        // arrows: false,
+        // fade: true,
+        // cssEase: 'ease-out',
+        // speed: 5000,
+        // pauseOnFocus: false,
+        // pauseOnHover: false
+
+        draggable: true,
         autoplay: true,
         autoplaySpeed: 7000,
-        dots: false,
         arrows: false,
+        dots: false,
         fade: true,
-        cssEase: 'ease-out',
         speed: 5000,
-        pauseOnFocus: false,
-        pauseOnHover: false
+        infinite: true,
+        cssEase: 'ease-in',
+        touchThreshold: 100
     });
 
     $(window).on('load resize', function() {
@@ -77,7 +87,7 @@ $(function() {
         kdwPos = $kdwArea.offset().top,
         kdwHeight = $kdwArea.outerHeight();
 
-    var $kdwBg = $('#fix_bg'),
+    var $kdwBg = $('.our-three-commit'),
         kdwBgHeight = $kdwBg.outerHeight();
 
     var classKdwAbs = 'kdw_abs',
@@ -90,37 +100,37 @@ $(function() {
         /* スクロール終わり：上からの位置 */
         defTop = '3%'; /* デフォルトの位置 */
 
-    // $win.on('load scroll', function() {
+    $win.on('load scroll', function() {
 
-    //     var value = $(this).scrollTop(),
-    //     scrollPos = $win.height() + value; /* スクロールの下の位置 */
+        var value = $(this).scrollTop(),
+        scrollPos = $win.height() + value; /* スクロールの下の位置 */
 
-    //     // 背景を固定する範囲までスクロールしたら
-    //     console.log('kdwBgHeight ' + (kdwPos + kdwHeight - kdwBgHeight));
-    //     console.log('scrollPos ' + scrollPos);
-    //     if(kdwPos + kdwBgHeight <= scrollPos) {
+        // 背景を固定する範囲までスクロールしたら
+        console.log('kdwBgHeight ' + (kdwPos + kdwHeight - kdwBgHeight));
+        console.log('scrollPos ' + scrollPos);
+        if(kdwPos + kdwBgHeight <= scrollPos) {
 
-    //         // こだわりエリアの底辺が見えたら
-    //         if(kdwPos + kdwHeight - kdwBgHeight <= scrollPos) {
+            // こだわりエリアの底辺が見えたら
+            // if(kdwPos + kdwHeight - kdwBgHeight <= scrollPos) {
 
-    //             $kdwBg.removeClass(bgFix);
-    //             $kdwBg.removeClass(bgFirst);
-    //             $kdwBg.addClass(bgStop);
+            //     $kdwBg.removeClass(bgFix);
+            //     $kdwBg.removeClass(bgFirst);
+            //     $kdwBg.addClass(bgStop);
 
-    //             // こだわりエリアの底辺が見えるまで
-    //         } else {
-    //             $kdwBg.removeClass(bgStop);
-    //             $kdwBg.removeClass(bgFirst);
-    //             $kdwBg.addClass(bgFix);
-    //         }
+            //     // こだわりエリアの底辺が見えるまで
+            // } else {
+                // $kdwBg.removeClass(bgStop);
+                $kdwBg.removeClass(bgFirst);
+                $kdwBg.addClass(bgFix);
+            // }
 
-    //     // 固定しない範囲
-    //     } else {
-    //         $kdwBg.removeClass(bgFix);
-    //         $kdwBg.removeClass(bgStop);
-    //         $kdwBg.addClass(bgFirst);
-    //     }
-    // });
+        // 固定しない範囲
+        } else {
+            $kdwBg.removeClass(bgFix);
+            // $kdwBg.removeClass(bgStop);
+            $kdwBg.addClass(bgFirst);
+        }
+    });
 });
 
 function initMap() {

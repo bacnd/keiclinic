@@ -23,14 +23,184 @@
             z-index: 2;
             @media screen and (max-width: 1366px) and (min-width: 769px) {
                 right: 3vw;
-                img {
-                    width: 30vw;
-                }
+                // img {
+                //     width: 30vw;
+                // }
             }
             @include max_768 {
                 display: none;
             }
+            .table-schedule {
+                border-collapse: collapse;
+                font-size: 14.5px;
+                color: #fff;
+    
+                th,
+                td {
+                    text-align: center;
+                    vertical-align: middle;
+                }
+    
+                thead {
+                    th {
+                        border-bottom: 1px solid #fff;
+                        &:not(:last-child) {
+                            border-right: 1px solid #fff;
+                        }
+                    }
+                }
+    
+                tbody {
+                    th {
+                        font-weight: bold;
+                    }
+    
+                    tr {
+                        &:not(:last-child) {
+                            th,
+                            td {
+                                border-bottom: 1px solid #fff;
+                            }
+                        }
+    
+                        th,
+                        td {
+                            &:not(:last-child) {
+                                border-right: 1px solid #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            @media (min-width: 768px) {
+                .table-schedule {
+                    th,
+                    td {
+                        padding: 11px 22px;
+                        letter-spacing: 1.8px;
+                    }
+    
+                    thead {
+                        th {
+                            &:first-child {
+                                border-top-left-radius: 20px;
+                            }
+    
+                            &:last-child {
+                                border-top-right-radius: 20px;
+                            }
+                        }
+                    }
+    
+                    tbody {
+                        tr {
+                            &:last-child {
+                                th,
+                                td {
+                                    &:first-child {
+                                        border-bottom-left-radius: 20px;
+                                    }
+                                }
+                            }
+    
+                            &:last-child {
+                                th,
+                                td {
+                                    &:last-child {
+                                        border-bottom-right-radius: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media (max-width: 1480px) and (min-width: 1024px) {
+                .table-schedule {
+                    th,
+                    td {
+                        padding: 11px 12px;
+                    }
+                }
+            }
+            @media (min-width: 1200px) {
+                .table-schedule {
+                }
+            } // font-size: 22px
+    
+            @media (max-width: 1200px) and (min-width: 768px) {
+                .table-schedule {
+                    th,
+                    td {
+                        padding: 11px 12px;
+                        letter-spacing: 0;
+                    }
+                }
+            }
+    
+            @media (max-width: 1199px) and (min-width: 992px) {
+                .table-schedule {
+                    font-size: 20px;
+                }
+            }
+    
+            @media (max-width: 991px) and (min-width: 768px) {
+                .table-schedule {
+                    font-size: 14px;
+                }
+            }
+    
+            @media (max-width: 767px) {
+                .table-schedule {
+                    // font-size: vw(22px, 750px);
+    
+                    th,
+                    td {
+                        // padding: vw(10px, 750px) vw(15px, 750px);
+                    }
+    
+                    thead {
+                        th {
+                            &:first-child {
+                                // border-top-left-radius: vw(20px, 750px);
+                            }
+    
+                            &:last-child {
+                                // border-top-right-radius: vw(20px, 750px);
+                            }
+                        }
+                    }
+    
+                    tbody {
+                        tr {
+                            &:last-child {
+                                th,
+                                td {
+                                    &:first-child {
+                                        // border-bottom-left-radius: vw(20px, 750px);
+                                    }
+                                }
+                            }
+    
+                            &:last-child {
+                                th,
+                                td {
+                                    &:last-child {
+                                        // border-bottom-right-radius: vw(20px, 750px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+        // table {
+        //     width: 100%;
+        // }
+
+        
+
         .fv-main-hero {
             // height: 100vh;
             overflow: hidden;
@@ -98,7 +268,8 @@
                     padding: 0 1vw;
                     letter-spacing: 2px;
                 }
-                &.current-menu-item, &:hover {
+                &.current-menu-item,
+                &:hover {
                     a {
                         opacity: 1;
                     }
@@ -242,7 +413,7 @@
                             }
                         }
                     }
-                }                
+                }
             }
         }
         #header_subpage {
@@ -263,8 +434,8 @@
                 height: 100vh;
                 justify-content: flex-start;
                 overflow-x: auto;
-                -webkit-transition: right .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
-                transition: right .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+                -webkit-transition: right 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+                transition: right 0.6s cubic-bezier(0.19, 1, 0.22, 1);
             }
             &.is-show {
                 width: 100%;
@@ -283,7 +454,7 @@
                 }
                 .hd-sub__logo {
                     @include min_769 {
-                        margin-left: 3.12500%;
+                        margin-left: 3.125%;
                     }
                     @include max_768 {
                         img {
@@ -308,6 +479,9 @@
                     @media screen and (max-width: 1680px) and (min-width: 769px) {
                         width: 82%;
                     }
+                    @media screen and (max-width: 1024px) and (min-width: 769px) {
+                        font-size: 14px;
+                    }
                 }
                 .hd-sub__nav {
                     @include dlflex;
@@ -320,7 +494,7 @@
                         justify-content: flex-end;
                     }
                     .hd-sub__item {
-                        padding: 0 32px 10px;
+                        padding: 10px 32px 10px;
                         letter-spacing: 1px;
                         @include resizefont(20px, 40px);
                         position: relative;
@@ -351,6 +525,10 @@
                             letter-spacing: 0;
                             text-align: center;
                         }
+                        @media screen and (max-width: 1024px) and (min-width: 769px) {
+                            padding-left: 1%;
+                            padding-right: 1%;
+                        }
                         @include max_768 {
                             letter-spacing: vw(2px);
                             border-bottom: 1px solid #d4d4d4;
@@ -373,8 +551,10 @@
                                 color: #fff;
                             }
                         }
-                        &.current-menu-item, &:hover {
-                            &::after, a {
+                        &.current-menu-item,
+                        &:hover {
+                            &::after,
+                            a {
                                 opacity: 1;
                             }
                         }
@@ -390,6 +570,9 @@
                     @media screen and (max-width: 1680px) and (min-width: 769px) {
                         width: 55%;
                         margin-left: 2%;
+                    }
+                    @media screen and (max-width: 1024px) and (min-width: 769px) {
+                        width: 40%;
                     }
                     @include max_768 {
                         width: 100%;
@@ -431,6 +614,11 @@
                                 margin-left: 6%;
                                 font-size: 24px;
                             }
+                            @media screen and (max-width: 1024px) and (min-width: 769px) {
+                                font-size: 18px;
+                                padding-top: 13%;
+                                padding-bottom: 13%;
+                            }
                             &::before {
                                 content: '';
                                 position: absolute;
@@ -462,7 +650,7 @@
                                 height: 25px;
                                 background: rgba(255, 255, 255, 0.5);
                                 @include max_768 {
-                                    content: none
+                                    content: none;
                                 }
                                 @media screen and (max-width: 1680px) and (min-width: 769px) {
                                     left: 20%;
@@ -513,6 +701,9 @@
                             @include min_769 {
                                 max-width: 120px;
                             }
+                            @media screen and (max-width: 1024px) and (min-width: 769px) {
+                                max-width: 26%;
+                            }
                             @include max_768 {
                                 order: 2;
                                 img {
@@ -520,7 +711,8 @@
                                 }
                             }
                         }
-                        &.hd-sub-ins, &.dh-sub-calendar {
+                        &.hd-sub-ins,
+                        &.dh-sub-calendar {
                             @include max_768 {
                                 width: 22.6666667%;
                                 text-align: center;
@@ -544,8 +736,8 @@
     height: 20px;
     padding-top: vw(69px);
     border-radius: 0;
-    -webkit-transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
-    transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    -webkit-transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     cursor: pointer;
@@ -560,13 +752,14 @@
         &, &:before, &:after {
             width: 30px;
             height: vw(2px);
-            -webkit-transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
-            transition: all .6s cubic-bezier(0.190, 1.000, 0.220, 1.000);
+            -webkit-transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+            transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
             background-color: #fff;
         }
     }
     .drawer-hamburger-icon {
-        &:before, &:after {
+        &:before,
+        &:after {
             position: absolute;
             top: -8px;
             left: 0;
@@ -579,7 +772,8 @@
 }
 .drawer-open {
     .drawer-hamburger-icon {
-        &:before, &:after {
+        &:before,
+        &:after {
             top: 0;
             background-color: #57463d;
         }

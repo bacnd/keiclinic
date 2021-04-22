@@ -44,16 +44,6 @@ footer {
                     @include min_769 {
                         margin-bottom: 49px;
                     }
-                    &:nth-of-type(2) {
-                        @include max_768 {
-                            margin-bottom: vw(64px);
-                        }
-                    }
-                    &:nth-of-type(3) {
-                        @include max_768 {
-                            margin-bottom: vw(58px);
-                        }
-                    }
                     &__title {
                         font-family: $ff-watchwordbold;
                         font-size: 40px;
@@ -61,6 +51,21 @@ footer {
                         letter-spacing: vw(6px);
                         color: #c38a4c;
                         @include resizefont(30px, 60px);
+                        position: relative;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: -992px;
+                            top: 0;
+                            bottom: 8px;
+                            margin: auto;
+                            height: 1px;
+                            background: #c38a4c;
+                            width: 1000px;
+                            @include max_768 {
+                                content: none;
+                            }
+                        }
                         @include min_769 {
                             letter-spacing: 4px;
                         }
@@ -226,6 +231,21 @@ footer {
                             }
                         }
                     }
+                    &:nth-of-type(2) {
+                        .ft-info__title {
+                            &::before {
+                                left: -994px;
+                            }
+                        }
+                        @include max_768 {
+                            margin-bottom: vw(64px);
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        @include max_768 {
+                            margin-bottom: vw(58px);
+                        }
+                    }
                 }
             }
             .ft-right {
@@ -292,6 +312,9 @@ footer {
             z-index: 9;
             @include max_768 {
                 display: none !important;
+            }
+            @media screen and (max-width: 1566px) and (min-width: 769px) {
+                right: 0;
             }
             a {
                 &:hover {
