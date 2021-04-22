@@ -255,7 +255,7 @@
                     padding: 21px;
                 }
                 &:first-of-type {
-                    width: vw(167px);
+                    width: vw(200px);
                     background-color: #f7f2e9;
                     font-size: 24px;
                     font-weight: bold;
@@ -431,29 +431,29 @@
             background: #fff;
         }
     }
-    // #fix_bg {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     right: 0;
-    //     margin: auto;
-    //     z-index: 0;
-    //     &.bg_first {
-    //         position: absolute;
-    //         top: 0;
-    //         bottom: auto;
-    //     }
-    //     &.bg_fix {
-    //         position: fixed;
-    //         top: 0;
-    //         bottom: auto;
-    //     }
-    //     &.bg_stop {
-    //         position: absolute;
-    //         top: auto;
-    //         bottom: 0;
-    //     }
-    // }
+    .our-three-commit {
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        // margin: auto;
+        z-index: 0;
+        &.bg_first {
+            position: absolute;
+            top: 0;
+            bottom: auto;
+        }
+        &.bg_fix {
+            position: fixed;
+            top: 0;
+            bottom: auto;
+        }
+        &.bg_stop {
+            position: absolute;
+            top: auto;
+            bottom: 0;
+        }
+    }
     .feature__inner {
         margin-top: vw(369px);
         @include min_769 {
@@ -559,6 +559,9 @@
                         padding-left: vw(30px);
                         padding-top: vw(19px);
                         padding-right: vw(30px);
+                    }
+                    @media screen and (max-width: 1536px) and (min-width: 1367px) {
+                        padding-left: 14%;
                     }
                     @media screen and (max-width: 1366px) and (min-width: 1200px) {
                         padding-left: 11%;
@@ -670,6 +673,9 @@
                         padding-top: 0;
                         padding-left: vw(30px);
                         padding-right: vw(30px);
+                    }
+                    @media screen and (max-width: 1536px) and (min-width: 1367px) {
+                        padding-left: 14%;
                     }
                     @media screen and (max-width: 1366px) and (min-width: 1200px) {
                         padding-left: 11%;

@@ -1,0 +1,16 @@
+<svg id="top_button" xmlns="http://www.w3.org/2000/svg" width="86" height="86" viewBox="0 0 86 86">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5c4b36;
+      }
+
+      .cls-2 {
+        fill: #e3a621;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="43" cy="43" r="43"/>
+  <path class="cls-2" d="M1700.98,14009.4a1.919,1.919,0,0,1,1.39.6l12.04,12.8a2.259,2.259,0,0,1,0,3,1.9,1.9,0,0,1-2.77,0l-10.66-11.4-10.65,11.4a1.9,1.9,0,0,1-2.77,0,2.237,2.237,0,0,1,0-3l12.04-12.8A1.9,1.9,0,0,1,1700.98,14009.4Z" transform="translate(-1658 -13975.4)"/>
+</svg>

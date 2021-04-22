@@ -1,5 +1,5 @@
 footer {
-    &.footer {
+    &#footer {
         position: relative;
         .ft-top {
             background-color: #fbfaf7;
@@ -38,21 +38,16 @@ footer {
                             width: vw(346px);
                         }
                     }
+                    a {
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
                 }
                 .ft-info {
                     margin-bottom: vw(49px);
                     @include min_769 {
                         margin-bottom: 49px;
-                    }
-                    &:nth-of-type(2) {
-                        @include max_768 {
-                            margin-bottom: vw(64px);
-                        }
-                    }
-                    &:nth-of-type(3) {
-                        @include max_768 {
-                            margin-bottom: vw(58px);
-                        }
                     }
                     &__title {
                         font-family: $ff-watchwordbold;
@@ -61,6 +56,21 @@ footer {
                         letter-spacing: vw(6px);
                         color: #c38a4c;
                         @include resizefont(30px, 60px);
+                        position: relative;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: -992px;
+                            top: 0;
+                            bottom: 8px;
+                            margin: auto;
+                            height: 1px;
+                            background: #c38a4c;
+                            width: 1000px;
+                            @include max_768 {
+                                content: none;
+                            }
+                        }
                         @include min_769 {
                             letter-spacing: 4px;
                         }
@@ -71,7 +81,7 @@ footer {
                             padding-left: vw(21px);
                             font-weight: bold;
                             color: #715c43;
-                            @include resizefont(12px, 24px);
+                            @include resizefont(11px, 24px);
                             letter-spacing: vw(1.2px);
                             @include min_769 {
                                 padding-left: 20px;
@@ -165,10 +175,119 @@ footer {
                         margin-top: vw(40px);
                         @include min_769 {
                             margin-top: 30px;
+                            max-width: 512px;
                         }
-                        img {
+                        // img {
+                        //     @include max_768 {
+                        //         width: 100%;
+                        //     }
+                        // }
+                        .table-schedule {
+                            border-collapse: collapse;
+                            font-size: 18px;
+                            font-weight: bold;
+                            width: 100%;
+                            @include resizefont(12px, 24px);
+                            th,
+                            td {
+                                text-align: center;
+                                vertical-align: middle;
+                            }
+                
+                            thead {
+                                th {
+                                    border-bottom: 1px solid #615543;
+                                    padding-top: 0 !important;
+                                    @include max_768 {
+                                        padding-bottom: vw(8px);
+                                    }
+                                    &:first-child {
+                                        border-right: 1px solid #615543;
+                                    }
+                                }
+                            }
+                
+                            tbody {
+                                tr {
+                                    th,
+                                    td {
+                                        border-bottom: 1px solid #615543;
+                                        @include max_768 {
+                                            padding: vw(7px) vw(5px);
+                                            &:first-child {
+                                                width: vw(190px);
+                                            }
+                                        }
+                                    }
+                
+                                    th,
+                                    td {
+                                        &:first-child {
+                                            border-right: 1px solid #615543;
+                                        }
+                                    }
+                                    .node-green {
+                                        color: #90b041;
+                                        font-size: 21px;
+                                        @media (max-width: 1199px) and (min-width: 769px) {
+                                            font-size: 18px;
+                                        }
+                                        @include resizefont(12px, 24px);
+                                    }
+                                }
+                            }
+                        }
+                        @media (min-width: 769px) {
+                            .table-schedule {
+                                th,
+                                td {
+                                    padding: 0.31rem 0.36rem;
+                                    letter-spacing: 0.73px;
+                                    &:first-child {
+                                        padding: 0.31rem 0.32rem;
+                                    }
+                                }
+                            }
+                        }
+                        @media (max-width: 1480px) and (min-width: 1024px) {
+                            .table-schedule {
+                                th,
+                                td {
+                                    padding: 11px 8px;
+                                }
+                            }
+                        }
+                        @media (min-width: 1200px) {
+                            .table-schedule {
+                            }
+                        }
+                
+                        @media (max-width: 1200px) and (min-width: 769px) {
+                            .table-schedule {
+                                th,
+                                td {
+                                    padding: 8px 8px !important;
+                                    letter-spacing: 0;
+                                }
+                            }
+                        }
+                
+                        @media (max-width: 1199px) and (min-width: 992px) {
+                            .table-schedule {
+                                font-size: 16px;
+                            }
+                        }
+                
+                        @media (max-width: 991px) and (min-width: 769px) {
+                            .table-schedule {
+                                font-size: 14px;
+                            }
+                        }
+                        .schedule-note {
+                            text-align: center;
+                            margin-top: 12px;
                             @include max_768 {
-                                width: 100%;
+                                margin-top: vw(12px);
                             }
                         }
                     }
@@ -224,6 +343,22 @@ footer {
                                 letter-spacing: 2px;
                                 @include resizefont(20px, 40px);
                             }
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        .ft-info__title {
+                            &::before {
+                                left: -994px;
+                            }
+                        }
+                        @include max_768 {
+                            margin-bottom: vw(64px);
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        margin-bottom: 44px;
+                        @include max_768 {
+                            margin-bottom: vw(58px);
                         }
                     }
                 }
@@ -292,6 +427,9 @@ footer {
             z-index: 9;
             @include max_768 {
                 display: none !important;
+            }
+            @media screen and (max-width: 1566px) and (min-width: 769px) {
+                right: 0;
             }
             a {
                 &:hover {

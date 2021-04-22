@@ -21,6 +21,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet">
         <!-- CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="assets/css/slick.css" rel="stylesheet" />
         <link href="assets/css/styles.css" rel="stylesheet" />
     </head>
@@ -33,7 +34,48 @@
                             <a href="#"><img src="assets/images/logo.png" alt="KEI DENTAL CLINIC" /></a>
                         </h1>
                     </div>
-                    <figure class="shedule-contact"><img src="assets/images/shedule-contact.png" alt="shedule contact"></figure>
+                    <div class="shedule-contact">
+                        <table class="table-schedule">
+                            <thead>
+                                <tr>
+                                    <th>診療時間</th>
+                                    <th>月</th>
+                                    <th>火</th>
+                                    <th>水</th>
+                                    <th>木</th>
+                                    <th>金</th>
+                                    <th>土</th>
+                                    <th>日祝</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>9:00～12:30</th>
+                                    <td>●</td>
+                                    <td>●</td>
+                                    <td>●</td>
+                                    <td>／</td>
+                                    <td>●</td>
+                                    <td>●</td>
+                                    <td>／</td>
+                                </tr>
+                                <tr>
+                                    <th>14:30～18:30</th>
+                                    <td>●</td>
+                                    <td>●</td>
+                                    <td>●</td>
+                                    <td>／</td>
+                                    <td>●</td>
+                                    <td>★</td>
+                                    <td>／</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="book-order">
+                            <p>ご予約・お問い合わせ</p>
+                            <p class="phone-ct"><a href="#">00-0000-0000</a></p>
+                        </div>
+                    </div>
                     <div class="fv-main-hero">
                         <div class="slide_box">
                             <figure class="fv-main-hero__img"><img src="assets/images/main_hero_01.jpg" alt="main" class="pc" /><img src="assets/images/main_hero_01_sp.jpg" alt="main" class="sp" /></figure>
@@ -49,22 +91,22 @@
                             <a href="#"><img src="assets/images/home.png" alt="home"></a>
                         </li>
                         <li class="menu-item">
-                            <a href="#">診療案内</a>
+                            <a href="service.html">診療案内</a>
                         </li>
                         <li class="menu-item">
-                            <a href="#">診療の流れ</a>
+                            <a href="flow.html">診療の流れ</a>
                         </li>
                         <li class="menu-item">
-                            <a href="#">院内・設備紹介</a>
+                            <a href="facilities.html">院内・設備紹介</a>
                         </li>
                         <li class="menu-item">
-                            <a href="#">院長・スタッフ紹介</a>
+                            <a href="staff.html">院長・スタッフ紹介</a>
                         </li>
                         <li class="menu-item">
-                            <a href="#">アクセス</a>
+                            <a href="access.html">アクセス</a>
                         </li>
                     </ul>
-                    <div class="news-area">
+                    <div class="news-area" data-aos="fade">
                         <div class="news-area__inner">
                             <div class="news-area__title">NEW</div>
                             <div class="article">
@@ -76,26 +118,26 @@
                     </div>
                     <div id="header_subpage">
                         <div class="hd-sub__inner">
-                            <a href="#" class="hd-sub__logo"><img src="assets/images/logo.png" alt="KEI Dental Clinic" class="pc"><img src="assets/images/logo-nav_sp.png" alt="KEI Dental Clinic" class="sp"></a>
+                            <a href="index.html" class="hd-sub__logo"><img src="assets/images/logo.png" alt="KEI Dental Clinic" class="pc"><img src="assets/images/logo-nav_sp.png" alt="KEI Dental Clinic" class="sp"></a>
                             <div class="hd-sub__right">
                                 <ul class="hd-sub__nav">
                                     <li class="hd-sub__item current-menu-item top">
-                                        <a href="#">TOP</a>
+                                        <a href="index.html">TOP</a>
                                     </li>
                                     <li class="hd-sub__item">
-                                        <a href="#">診療案内</a>
+                                        <a href="service.html">診療案内</a>
                                     </li>
                                     <li class="hd-sub__item">
-                                        <a href="#">診療の流れ</a>
+                                        <a href="flow.html">診療の流れ</a>
                                     </li>
                                     <li class="hd-sub__item">
-                                        <a href="#">院内・設備紹介</a>
+                                        <a href="facilities.html">院内・設備紹介</a>
                                     </li>
                                     <li class="hd-sub__item">
-                                        <a href="#">院長・スタッフ紹介</a>
+                                        <a href="staff.html">院長・スタッフ紹介</a>
                                     </li>
                                     <li class="hd-sub__item">
-                                        <a href="#">アクセス</a>
+                                        <a href="access.html">アクセス</a>
                                     </li>
                                 </ul>
                                 <ul class="hd-sub__contact">
@@ -123,12 +165,12 @@
                 <section class="box-section box-covid-info">
                     <div class="container">
                         <div class="covid-info__inner">
-                            <figure class="banner-follow"><img src="assets/images/banner-follow.png" alt="Follow me"></figure>
-                            <div class="measures__title"><img src="assets/images/measures_title.png" alt="新型コロナウイルス感染症対策をおこなっています" class="pc"><img src="assets/images/measures_title_sp.png" alt="新型コロナウイルス感染症対策をおこなっています" class="sp"></div>
-                            <p class="measures__txt">安心受診のため、当院では下記の取り組みをしています。</p>
-                            <p class="measures__note"><span>※感染対策のため、ご来院時における手指のアルコールの消毒、マスクの着用及び、検温へのご協力をお願いいたします。</span></p>
+                            <figure class="banner-follow" data-aos="fade"><img src="assets/images/banner-follow.png" alt="Follow me"></figure>
+                            <div class="measures__title" data-aos="fade"><img src="assets/images/measures_title.png" alt="新型コロナウイルス感染症対策をおこなっています" class="pc"><img src="assets/images/measures_title_sp.png" alt="新型コロナウイルス感染症対策をおこなっています" class="sp"></div>
+                            <p class="measures__txt" data-aos="fade">安心受診のため、当院では下記の取り組みをしています。</p>
+                            <p class="measures__note" data-aos="fade"><span>※感染対策のため、ご来院時における手指のアルコールの消毒、マスクの着用及び、検温へのご協力をお願いいたします。</span></p>
                             <div class="plan__list">
-                                <div class="plan">
+                                <div class="plan" data-aos="fade">
                                     <div class="plan__inner">
                                         <div class="plan__icon"><img src="assets/images/healthcare_sp.png" alt="healthcare"></div>
                                         <div class="plan__title">常時行っている取り組み</div>
@@ -138,14 +180,14 @@
                                             <li class="step__item" data-num="3">使い捨てエプロン・コップを使用し、患者さま毎に廃棄</li>
                                             <li class="step__item" data-num="4">消毒液で診療台・操作パネルを清拭</li>
                                             <li class="step__item" data-num="5">ドクター・スタッフのこまめな手洗いと手指消毒</li>
-                                            <li class="step__item" data-num="6">治療に使用する全ての器具を欧州基準のクラスB<br />にて滅菌</li>
+                                            <li class="step__item" data-num="6">治療に使用する全ての器具を欧州基準のクラスB<br class="pc" />にて滅菌</li>
                                             <li class="step__item" data-num="7">院内における医療用空気清浄機の常時稼働</li>
                                             <li class="step__item" data-num="8">院内の常時換気</li>
                                             <li class="step__item" data-num="9">すべての診療室が個室またはパーティションで区画化</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="plan">
+                                <div class="plan" data-aos="fade">
                                     <div class="plan__inner">
                                         <div class="plan__icon"><img src="assets/images/medical-insurance_sp.png" alt="medical insurance"></div>
                                         <div class="plan__title">新型コロナウイルス対策<br />として行っている取り組み</div>
@@ -165,9 +207,9 @@
                 </section>
                 <section class="box-section box-information">
                     <div class="container">
-                        <h2 class="section__title ff-watchworddemo">INFORMATION</h2>
-                        <div class="section__title-jp">求人情報</div>
-                        <table class="table-info">
+                        <h2 class="section__title ff-watchworddemo" data-aos="fade">INFORMATION</h2>
+                        <div class="section__title-jp" data-aos="fade">求人情報</div>
+                        <table class="table-info" data-aos="fade">
                             <tbody>
                                 <tr>
                                     <td>職種</td>
@@ -223,13 +265,13 @@
                 </section>
                 <section class="box-section box-greeting">
                     <div class="container">
-                        <h2 class="section__title ff-watchworddemo">GREETING</h2>
-                        <div class="section__title-jp">院長あいさつ</div>
+                        <h2 class="section__title ff-watchworddemo" data-aos="fade">GREETING</h2>
+                        <div class="section__title-jp" data-aos="fade">院長あいさつ</div>
                         <div class="box-greeting__inner">
                             <div class="support-health">
-                                <h3 class="support-health__title">“長く噛める”をサポートいたします</h3>
-                                <div class="support-health__title-en">SUPPORT FOR YOUR HEALTH</div>
-                                <p class="support-health__txt">当院では、ご自身の歯でいつまでも噛める状態であってほしいと考えています。<br />
+                                <h3 class="support-health__title" data-aos="fade">“長く噛める”をサポートいたします</h3>
+                                <div class="support-health__title-en" data-aos="fade">SUPPORT FOR YOUR HEALTH</div>
+                                <p class="support-health__txt" data-aos="fade">当院では、ご自身の歯でいつまでも噛める状態であってほしいと考えています。<br />
                                     噛むことで全身の病気などにも影響を少なくすることがわかってきました。<br />
                                     患者さまにご納得いただいた上での処置を行っていきます。<br /><br />
                                     皆さま、こんにちは。<br >
@@ -240,19 +282,19 @@
                                     「長く噛める」お口づくりをお手伝いいたします。よろしくお願いいたします。</p>
                                 <a href="#" class="btn-more dl-flex">MORE</a>
                             </div>
-                            <figure class="keikato__img"><img src="assets/images/keikato.png" alt="KEI KATO加藤 慶"></figure>
+                            <figure class="keikato__img" data-aos="fade"><img src="assets/images/keikato.png" alt="KEI KATO加藤 慶"></figure>
                         </div>
                     </div>
                 </section>
                 <section class="box-section box-feature">
                     <div class="container">
-                        <h2 class="section__title ff-watchworddemo">FEATURE</h2>
+                        <h2 class="section__title ff-watchworddemo" data-aos="fade">FEATURE</h2>
                     </div>
-                    <figure class="our-three-commit"><img src="assets/images/our-three-commit.png" alt="当院の3つこだわり"></figure>
+                    <figure class="our-three-commit" data-aos="fade"><img src="assets/images/our-three-commit.png" alt="当院の3つこだわり"></figure>
                     <div class="feature__inner">
-                        <div class="point point-1">
+                        <div class="point point-1" data-aos="fade">
                             <div class="point__inner">
-                                <figure class="point-1__img"><img src="assets/images/point-1_img.png" alt="お口の健康をトータルでサポートします" class="pc"><img src="assets/images/point-1_img_sp.png" alt="お口の健康をトータルでサポートします" class="sp"></figure>
+                                <figure class="point-1__img" data-aos="fade"><img src="assets/images/point-1_img.png" alt="お口の健康をトータルでサポートします" class="pc"><img src="assets/images/point-1_img_sp.png" alt="お口の健康をトータルでサポートします" class="sp"></figure>
                                 <div class="point-content">
                                     <div class="point__num"><img src="assets/images/point-1.png" alt="Point  1" class="pc"><img src="assets/images/point-1_sp.png" alt="Point 1" class="sp"></div>
                                     <h4 class="point__title"><span>お口の健康をトータルでサポートします</span></h4>
@@ -263,7 +305,7 @@
                                 </div>
                             </div>                            
                         </div>
-                        <div class="point point-2">
+                        <div class="point point-2" data-aos="fade">
                             <div class="point__inner">
                                 <figure class="point-2__img"><img src="assets/images/point-2_img.png" alt="的確な治療に対応できる機器を導入しています" class="pc"><img src="assets/images/point-2_img_sp.png" alt="的確な治療に対応できる機器を導入しています" class="sp"></figure>
                                 <div class="point-content">
@@ -276,7 +318,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="point point-3">
+                        <div class="point point-3" data-aos="fade">
                             <div class="point__inner">
                                 <figure class="point-3__img"><img src="assets/images/point-3_img.png" alt="衛生管理を徹底しています" class="pc"><img src="assets/images/point-3_img_sp.png" alt="衛生管理を徹底しています" class="sp"></figure>
                                 <div class="point-content">
@@ -288,7 +330,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="point point-4">
+                        <div class="point point-4" data-aos="fade">
                             <div class="point__inner">
                                 <figure class="point-4__img"><img src="assets/images/point-4_img.png" alt="リラックスできる空間です" class="pc"><img src="assets/images/point-4_img_sp.png" alt="リラックスできる空間です" class="sp"></figure>
                                 <div class="point-content">
@@ -303,45 +345,45 @@
                 </section>
                 <section class="box-section box-service">
                     <div class="container">
-                        <h2 class="section__title ff-watchworddemo">SERVICE<small class="section__title-jp">診療案内</small></h2>
+                        <h2 class="section__title ff-watchworddemo" data-aos="fade">SERVICE<small class="section__title-jp">診療案内</small></h2>
                         <ul class="service__list">
-                            <li class="service">
+                            <li class="service" data-aos="fade">
                                 <figure class="service__img"><img src="assets/images/service-01_pc.png" alt="むし歯Caries"></figure>
                                 <p class="service__name">むし歯<span class="service__name-en">Caries</span></p>
                             </li>
-                            <li class="service">
+                            <li class="service" data-aos="fade">
                                 <figure class="service__img"><img src="assets/images/service-02_pc.png" alt="根管治療(歯内療法)Root canal treatment"></figure>
                                 <p class="service__name">根管治療<br />(歯内療法)<span class="service__name-en">Root canal<br />treatment</span></p>
                             </li>
-                            <li class="service">
+                            <li class="service" data-aos="fade">
                                 <figure class="service__img"><img src="assets/images/service-03_pc.png" alt="歯周病Perio"></figure>
                                 <p class="service__name">歯周病<span class="service__name-en">Perio</span></p>
                             </li>
-                            <li class="service">
+                            <li class="service" data-aos="fade">
                                 <figure class="service__img"><img src="assets/images/service-04_pc.png" alt="被せ物Cover"></figure>
                                 <p class="service__name">被せ物<span class="service__name-en">Cover</span></p>
                             </li>
-                            <li class="service">
+                            <li class="service" data-aos="fade">
                                 <figure class="service__img"><img src="assets/images/service-05_pc.png" alt="入れ歯Denture"></figure>
                                 <p class="service__name">入れ歯<span class="service__name-en">Denture</span></p>
                             </li>
-                            <li class="service">
+                            <li class="service" data-aos="fade">
                                 <figure class="service__img"><img src="assets/images/service-06_pc.png" alt="予防クリーニングCleaning"></figure>
                                 <p class="service__name">予防クリーニング<span class="service__name-en">Cleaning</span></p>
                             </li>
-                            <li class="service">
+                            <li class="service" data-aos="fade">
                                 <figure class="service__img"><img src="assets/images/service-07_pc.png" alt="矯正歯科Orthodontics"></figure>
                                 <p class="service__name">矯正歯科<span class="service__name-en">Orthodontics</span></p>
                             </li>
-                            <li class="service">
+                            <li class="service" data-aos="fade">
                                 <figure class="service__img"><img src="assets/images/service-08_pc.png" alt="インプラントImplant"></figure>
                                 <p class="service__name">インプラント<span class="service__name-en">Implant</span></p>
                             </li>
-                            <li class="service">
+                            <li class="service" data-aos="fade">
                                 <figure class="service__img"><img src="assets/images/service-09_pc.png" alt="審美治療Aesthetic treatment"></figure>
                                 <p class="service__name">審美治療<span class="service__name-en">Aesthetic treatment</span></p>
                             </li>
-                            <li class="service">
+                            <li class="service" data-aos="fade">
                                 <figure class="service__img"><img src="assets/images/service-10_pc.png" alt="ホワイトニングWhitening"></figure>
                                 <p class="service__name">ホワイトニング<span class="service__name-en">Whitening</span></p>
                             </li>
@@ -351,9 +393,9 @@
                 <section class="box-section box-facilities para para-g7 para-in" id="pickup">
                     <div class="content-wrap">
                         <div class="content">
-                            <h2 class="section__title ff-watchworddemo">FACILITIES</h2>
-                            <div class="section__title-jp">院内・設備紹介</div>
-                            <div class="carousel wrap" data-cnt="0">
+                            <h2 class="section__title ff-watchworddemo" data-aos="fade">FACILITIES</h2>
+                            <div class="section__title-jp" data-aos="fade">院内・設備紹介</div>
+                            <div class="carousel wrap" data-cnt="0" data-aos="fade">
                                 <div class="img-text">
                                     <div class="imgs" style="opacity: 1;">
                                         <div class="img-slide">
@@ -445,10 +487,10 @@
                     <div class="container">
                         <div class="box-calendar__inner">
                             <div class="calendar-left">
-                                <h2 class="section__title ff-watchworddemo">CALENDAR</h2>
-                                <div class="section__title-jp">診療カレンダー</div>
+                                <h2 class="section__title ff-watchworddemo" data-aos="fade">CALENDAR</h2>
+                                <div class="section__title-jp" data-aos="fade">診療カレンダー</div>
                             </div>
-                            <div class="calendar-right">
+                            <div class="calendar-right" data-aos="fade">
                                 <figure class="calendar__img"><img src="assets/images/calendar.jpg" alt="CALENDAR"></figure>
                             </div>
                         </div>
@@ -457,14 +499,14 @@
                 <section class="box-section box-appointment">
                     <div class="container">
                         <div class="box-appointment__inner">
-                            <div class="appointment__item">
+                            <div class="appointment__item" data-aos="fade">
                                 <div class="item-boder">
                                     <figure class="appointment__icon"><img src="assets/images/aid-kit.png" alt="急患随時受付"></figure>
                                     <div class="appointment__title">急患随時受付</div>
                                     <p class="appointment__txt">柔軟に対応しております。混雑している場合はお待たせすることもございますので、ご来院いただく前に一度お電話(準備中)にてお問い合わせください。</p>
                                 </div>
                             </div>
-                            <div class="appointment__item">
+                            <div class="appointment__item" data-aos="fade">
                                 <div class="item-boder">
                                     <figure class="appointment__icon"><img src="assets/images/notebook.png" alt="予約優先診療"></figure>
                                     <div class="appointment__title">予約優先診療</div>
@@ -475,23 +517,61 @@
                     </div>
                 </section>
             </main>
-            <footer class="footer">
+            <footer id="footer">
                 <div class="ft-top">
                     <div class="ft-left">
                         <div class="ft-left__inner">
-                            <div class="logo-ft"><a href="#"><img src="assets/images/logo-ft.png" alt="logo" /></a></div>
-                            <div class="ft-info">
+                            <div class="logo-ft" data-aos="fade"><a href="#"><img src="assets/images/logo-ft.png" alt="logo" /></a></div>
+                            <div class="ft-info" data-aos="fade">
                                 <div class="ft-info__title">CONTACT<span>ご予約・お問い合わせ</span></div>
                                 <ul class="phone-ins">
                                     <li class="phone">00-0000-0000</li>
                                     <li class="ins">@kdc_okazaki</li>
                                 </ul>
                             </div>
-                            <div class="ft-info">
+                            <div class="ft-info" data-aos="fade">
                                 <div class="ft-info__title">SHEDULE<span>診療時間</span></div>
-                                <div class="shedule-info"><img src="assets/images/shedule.png" alt="SHEDULE診療時間" /></div>
+                                <div class="shedule-info">
+                                    <table class="table-schedule">
+                                        <thead>
+                                            <tr>
+                                                <th>診療時間</th>
+                                                <th>月</th>
+                                                <th>火</th>
+                                                <th>水</th>
+                                                <th>木</th>
+                                                <th>金</th>
+                                                <th>土</th>
+                                                <th>日祝</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>9:00～12:30</th>
+                                                <td class="node-green">●</td>
+                                                <td class="node-green">●</td>
+                                                <td class="node-green">●</td>
+                                                <td class="node-green">／</td>
+                                                <td class="node-green">●</td>
+                                                <td class="node-green">●</td>
+                                                <td class="node-green">／</td>
+                                            </tr>
+                                            <tr>
+                                                <th>14:30～18:30</th>
+                                                <td class="node-green">●</td>
+                                                <td class="node-green">●</td>
+                                                <td class="node-green">●</td>
+                                                <td class="node-green">／</td>
+                                                <td class="node-green">●</td>
+                                                <td class="node-green">★</td>
+                                                <td class="node-green">／</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="schedule-note">定休日：木曜・日曜・祝日    ★：土曜午後は14：00～18：00</p>
+                                </div>
                             </div>
-                            <div class="ft-info">
+                            <div class="ft-info" data-aos="fade">
                                 <div class="ft-info__title">ACCESS<span>アクセス</span></div>
                                 <div class="access-address">〒444-0061　<span>愛知県岡崎市能見町</span>１４４</div>
                                 <div class="access-guide">
@@ -501,25 +581,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="ft-right">
+                    <div class="ft-right" data-aos="fade">
                         <div id="map"></div>
                     </div>
                 </div>
                 <div class="ft-button">
                     <div class="container">
                         <ul class="ft-nav">
-                            <li class="ft-nav__item"><a href="#">TOP</a></li>
-                            <li class="ft-nav__item"><a href="#">診療案内</a></li>
-                            <li class="ft-nav__item"><a href="#">診療の流れ</a></li>
-                            <li class="ft-nav__item"><a href="#">院内・設備紹介</a></li>
-                            <li class="ft-nav__item"><a href="#">院長・スタッフ紹介</a></li>
-                            <li class="ft-nav__item"><a href="#">アクセス</a></li>
+                            <li class="ft-nav__item"><a href="index.html">TOP</a></li>
+                            <li class="ft-nav__item"><a href="service.html">診療案内</a></li>
+                            <li class="ft-nav__item"><a href="flow.html">診療の流れ</a></li>
+                            <li class="ft-nav__item"><a href="facilities.html">院内・設備紹介</a></li>
+                            <li class="ft-nav__item"><a href="staff.html">院長・スタッフ紹介</a></li>
+                            <li class="ft-nav__item"><a href="access.html">アクセス</a></li>
                         </ul>
                         <p class="copyright">Copyright © 2021 KEI DENTAL CLINIC. All Rights Reserved.</p>
                     </div>
                 </div>
                 <div id="page_top">
-                    <a href="#"><img src="assets/images/to-top.png" alt="ページの先頭へ戻る" width="98" height="98" /></a>
+                    <a href="#"><img src="assets/images/top_button.svg" alt="ページの先頭へ戻る" width="98" height="98" /></a>
                 </div>
             </footer>
         </div>
@@ -528,6 +608,7 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxSrdupaSsY_EwyBddC_KsbdhXrYjnUs0&callback=initMap" async></script>
         <script src="assets/js/common2.js"></script>
         <script src="assets/js/slick.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="assets/js/index.js"></script>
         <script src="assets/js/common.js"></script>
     </body>
