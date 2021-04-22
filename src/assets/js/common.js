@@ -16,27 +16,29 @@ $(function() {
         return false;
     });
 
-    $('.slide_box').slick({
-        // autoplay: true,
-        // autoplaySpeed: 7000,
-        // arrows: false,
-        // fade: true,
-        // cssEase: 'ease-out',
-        // speed: 5000,
-        // pauseOnFocus: false,
-        // pauseOnHover: false
+    if($('.slide_box')[0]) {
+        $('.slide_box').slick({
+            // autoplay: true,
+            // autoplaySpeed: 7000,
+            // arrows: false,
+            // fade: true,
+            // cssEase: 'ease-out',
+            // speed: 5000,
+            // pauseOnFocus: false,
+            // pauseOnHover: false
 
-        draggable: true,
-        autoplay: true,
-        autoplaySpeed: 7000,
-        arrows: false,
-        dots: false,
-        fade: true,
-        speed: 5000,
-        infinite: true,
-        cssEase: 'ease-in',
-        touchThreshold: 100
-    });
+            draggable: true,
+            autoplay: true,
+            autoplaySpeed: 7000,
+            arrows: false,
+            dots: false,
+            fade: true,
+            speed: 5000,
+            infinite: true,
+            cssEase: 'ease-in',
+            touchThreshold: 100
+        });
+    }
 
     $(window).on('load resize', function() {
         var win = $(this);
