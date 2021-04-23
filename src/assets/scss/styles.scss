@@ -394,9 +394,9 @@
 
 .box-feature {
     padding-top: vw(43px);
-    background: url('../images/bg-feature.jpg') center no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    background: url('../images/bg-feature.jpg') center 0 no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover;
     position: relative;
     overflow: hidden;
     @include min_769 {
@@ -407,7 +407,7 @@
         position: absolute;
         top: 34px;
         right: 247px;
-        z-index: 1;
+        z-index: 0;
         @media screen and (max-width: 1680px) and (min-width: 769px) {
             right: 7%;
             text-align: right;
@@ -418,6 +418,7 @@
         @include max_768 {
             top: vw(104px);
             right: vw(22px);
+            position: absolute !important;
             img {
                 width: vw(397px);
             }
@@ -431,29 +432,29 @@
             background: #fff;
         }
     }
-    .our-three-commit {
-        // position: absolute;
-        // top: 0;
-        // left: 0;
-        // right: 0;
-        // margin: auto;
-        z-index: 0;
-        &.bg_first {
-            position: absolute;
-            top: 0;
-            bottom: auto;
-        }
-        &.bg_fix {
-            position: fixed;
-            top: 0;
-            bottom: auto;
-        }
-        &.bg_stop {
-            position: absolute;
-            top: auto;
-            bottom: 0;
-        }
-    }
+    // .our-three-commit {
+    //     // position: absolute;
+    //     // top: 0;
+    //     // left: 0;
+    //     // right: 0;
+    //     // margin: auto;
+    //     z-index: 0;
+    //     &.bg_first {
+    //         position: absolute;
+    //         top: 0;
+    //         bottom: auto;
+    //     }
+    //     &.bg_fix {
+    //         position: fixed;
+    //         top: 0;
+    //         bottom: auto;
+    //     }
+    //     &.bg_stop {
+    //         position: absolute;
+    //         top: auto;
+    //         bottom: 0;
+    //     }
+    // }
     .feature__inner {
         margin-top: vw(369px);
         @include min_769 {
@@ -540,7 +541,10 @@
                 }
             }
             &-2 {
-                margin-top: 132px;
+                margin-top: vw(150px);
+                @include min_769 {
+                    margin-top: 132px;
+                }
                 &__img {
                     // position: absolute;
                     // right: 0;
