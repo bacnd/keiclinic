@@ -29,11 +29,11 @@ $(function() {
 
             draggable: true,
             autoplay: true,
-            autoplaySpeed: 7000,
+            autoplaySpeed: 5000,
             arrows: false,
             dots: false,
             fade: true,
-            speed: 5000,
+            speed: 4000,
             infinite: true,
             cssEase: 'ease-in',
             touchThreshold: 100
@@ -107,7 +107,7 @@ function initMap() {
         zoom: 16,
         center: bangalore,
     });
-    const image = window.location.origin + "/assets/images/marker-icon.png";
+    const image = window.location.origin + "/keiclinic/assets/images/marker-icon.png";
     // Add a marker at the center of the map.
     addMarker(bangalore, map, image);
 }

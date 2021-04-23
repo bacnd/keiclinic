@@ -29,11 +29,11 @@ $(function() {
 
             draggable: true,
             autoplay: true,
-            autoplaySpeed: 7000,
+            autoplaySpeed: 5000,
             arrows: false,
             dots: false,
             fade: true,
-            speed: 5000,
+            speed: 4000,
             infinite: true,
             cssEase: 'ease-in',
             touchThreshold: 100

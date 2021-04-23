@@ -393,15 +393,14 @@
 }
 
 .box-feature {
-    padding-top: vw(43px);
-    background: url('../images/bg-feature.jpg') center 0 no-repeat;
+    // padding-top: vw(43px);
     // background-attachment: fixed;
     // background-size: cover;
     position: relative;
     overflow: hidden;
     @include min_769 {
         padding-bottom: 100px;
-        padding-top: 108px;
+        // padding-top: 108px;
     }
     .our-three-commit {
         position: absolute;
@@ -456,9 +455,21 @@
     //     }
     // }
     .feature__inner {
-        margin-top: vw(369px);
-        @include min_769 {
-            margin-top: 210px;            
+        // margin-top: vw(369px);
+        // @include min_769 {
+        //     margin-top: 210px;
+        // }
+        .bg-box-feature {
+            background: url('../images/bg-feature.jpg') center 0 no-repeat;
+            background-size: cover;
+            padding-top: vw(43px);
+            position: relative;
+            overflow: hidden;
+            padding-bottom: vw(87px);
+            @include min_769 {
+                padding-top: 108px;
+                padding-bottom: 29px;
+            }
         }
         .point {
             max-width: 1920px;
@@ -506,6 +517,10 @@
                 }
             }
             &-1 {
+                margin-top: vw(369px);
+                @include min_769 {
+                    margin-top: 210px;
+                }
                 &__img {
                     @include max_768 {
                         margin-right: vw(30px);
@@ -532,6 +547,7 @@
                         font-family: $ff-primary;
                         &::after {
                             background: url('../images/arrow-icon2-w.png') no-repeat;
+                            background-size: contain;
                         }
                         &:hover {
                             border-color: #715c43;
