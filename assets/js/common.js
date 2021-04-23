@@ -83,77 +83,19 @@ $(function() {
             $cloneNav.removeClass(showClass);
         }
 
-        // if(value > boxFeature) {
-        //     $('.our-three-commit').css({'position': 'fixed'});
-        // } else {
-        //     $('.our-three-commit').css({'position': 'absolute'});
-        // }
-
         if(value < boxFeature || kdwPos < value - stopTop - kdwBgHeight) {
             $('.our-three-commit').css({'position': 'absolute'});
         } else {
             $('.our-three-commit').css({'position': 'fixed'});
         }
     });
-
-    // var $scl = $('#header_subpage'),
-    //     sclHeight = $scl.outerHeight();
-
-    // var $kdwArea = $('.box-feature'),
-    //     kdwPos = $kdwArea.offset().top,
-    //     kdwHeight = $kdwArea.outerHeight();
-
-    // var $kdwBg = $('.our-three-commit'),
-    //     kdwBgHeight = $kdwBg.outerHeight();
-
-    var classKdwAbs = 'kdw_abs',
-        classKdwFix = 'kdw_fix',
-        bgFirst = 'bg_first',
-        bgFix = 'bg_fix',
-        bgStop = 'bg_stop';
-
-    var stopTop = kdwHeight - $win.height(),
-        /* スクロール終わり：上からの位置 */
-        defTop = '3%'; /* デフォルトの位置 */
-
-    // $win.on('load scroll', function() {
-
-    //     var value = $(this).scrollTop(),
-    //     scrollPos = $win.height() + value; /* スクロールの下の位置 */
-
-    //     // 背景を固定する範囲までスクロールしたら
-    //     if(kdwPos + kdwBgHeight <= scrollPos) {
-
-    //         // こだわりエリアの底辺が見えたら
-    //         // if(kdwPos + kdwHeight - kdwBgHeight <= scrollPos) {
-
-    //         //     $kdwBg.removeClass(bgFix);
-    //         //     $kdwBg.removeClass(bgFirst);
-    //         //     $kdwBg.addClass(bgStop);
-
-    //         //     // こだわりエリアの底辺が見えるまで
-    //         // } else {
-    //             // $kdwBg.removeClass(bgStop);
-    //             $kdwBg.removeClass(bgFirst);
-    //             $kdwBg.addClass(bgFix);
-    //         // }
-
-    //     // 固定しない範囲
-    //     } else {
-    //         $kdwBg.removeClass(bgFix);
-    //         // $kdwBg.removeClass(bgStop);
-    //         $kdwBg.addClass(bgFirst);
-    //     }
-    // });
-
-    
 });
 
 $(function() {
     $(document).ready(function() {
       AOS.init({
-        duration: 500,
-        offset: 200,
+        duration: 1500,
+        offset: 300,
         once: false
       });
     });
@@ -165,7 +107,7 @@ function initMap() {
         zoom: 16,
         center: bangalore,
     });
-    const image = window.location.origin + "/keiclinic/assets/images/marker-icon.png";
+    const image = window.location.origin + "/assets/images/marker-icon.png";
     // Add a marker at the center of the map.
     addMarker(bangalore, map, image);
 }
