@@ -200,7 +200,7 @@
             overflow: hidden;
             @include max_768 {
                 height: auto;
-                max-height: 100vh;
+                // max-height: 100vh;
             }
             .fv-main-hero__img {
                 img {

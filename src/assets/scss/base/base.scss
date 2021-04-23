@@ -137,6 +137,7 @@ output:-moz-ui-invalid {
     @include max_768 {
         padding-left: vw(30px);
         padding-right: vw(30px);
+        overflow: hidden;
     }
 }
 
