@@ -1117,15 +1117,27 @@
             flex-direction: column;
             align-items: baseline;
         }
+        .calendar-left {
+            @include min_769 {
+                width: calc(50% - 58px);
+            }
+        }
         .calendar-right {
-            @include max_768 {
+            width: calc(50% + 58px);
+            @media screen and (max-width: 1024px) {
                 margin-top: vw(60px);
-                width: 100%;
             }
             .calendar__img {
                 img {
                     width: 100%;
                 }
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+            align-items: baseline;
+            .calendar-left, .calendar-right {
+                width: 100%;
             }
         }
     }
