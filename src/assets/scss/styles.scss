@@ -203,7 +203,7 @@
                     }
                     .plan__inner {
                         @include max_768 {
-                            padding-bottom: vw(150px);
+                            // padding-bottom: vw(150px);
                         }
                     }
                     .plan__title {
@@ -213,7 +213,7 @@
                         }
                     }
                     .step__list {
-                        margin-top: vw(122px);
+                        // margin-top: vw(122px);
                         @include min_769 {
                             margin-top: 75px;
                         }
@@ -777,6 +777,9 @@
                 width: 20%;
                 margin-bottom: 41px;
             }
+            @media screen and (min-width: 415px) and (max-width: 768px) {
+                width: 33.33%;
+            }
             &__img {
                 width: vw(143px);
                 height: vw(140px);
@@ -876,7 +879,7 @@
             z-index: 1;
             overflow: hidden;
             @include max_768 {
-                width: 100%;
+                width: 100% !important;
                 padding-left: 5.33%;
                 padding-right: 5.33%;
                 box-sizing: border-box;
@@ -1180,7 +1183,7 @@
                     padding: 10px;
                 }
                 @include max_768 {                    
-                    min-height: vw(450px);
+                    // min-height: vw(450px);
                 }
                 .item-boder {
                     border: solid 1px #e3a621;
@@ -1204,6 +1207,9 @@
                             @include max_768 {
                                 width: vw(104px);
                             }
+                            @media screen and (min-width: 414px) and (max-width: 768px) {
+                                width: vw(100px);
+                            }
                         }
                     }
                 }
@@ -1213,13 +1219,16 @@
                             @include max_768 {
                                 width: vw(133px);
                             }
+                            @media screen and (min-width: 414px) and (max-width: 768px) {
+                                width: vw(100px);
+                            }
                         }
                     }
-                    .appointment__txt {
-                        @include max_768 {
-                            margin-top: vw(42px);
-                        }
-                    }
+                    // .appointment__txt {
+                    //     @include max_768 {
+                    //         margin-top: vw(42px);
+                    //     }
+                    // }
                 }
             }
             &__icon {
@@ -1227,6 +1236,9 @@
                 @include dlflexcenter;
                 @include min_769 {
                     height: 105px;
+                }
+                @media screen and (min-width: 414px) and (max-width: 768px) {
+                    height: vw(100px);
                 }
             }
             &__title {
@@ -1238,7 +1250,7 @@
                 position: relative;
                 margin-top: vw(24px);
                 padding-bottom: vw(25px);
-                @include resizefont(20px, 40px);
+                @include resizefont(20px, 26px);
                 @include min_769 {
                     margin-top: 24px;
                     padding-bottom: 25px;
@@ -1263,6 +1275,7 @@
                 line-height: 1.81;
                 letter-spacing: -0.6px;
                 margin-top: vw(34px);
+                @include resizefont(12px, 20px);
                 @include min_769 {
                     margin-top: 23px;
                 }

@@ -84,7 +84,7 @@ a:link,
 a:visited,
 a:active {
     text-decoration: none;
-    color: #333333;
+    color: #2e2e2e;
 }
 
 img {
@@ -277,6 +277,7 @@ output:-moz-ui-invalid {
         width: vw(53px);
         height: vw(6px);
         background-size: contain;
+        @include transition();
         @include min_769 {
             width: 53px;
             height: 6px;
@@ -288,6 +289,11 @@ output:-moz-ui-invalid {
         font-family: $ff-watchwordbold;
         color: #fff;
         opacity: 1;
+        &::after {
+            @include min_769 {
+                right: -30px;
+            }
+        }
         &::before {
             content: '';
             position: absolute;

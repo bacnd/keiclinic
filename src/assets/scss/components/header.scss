@@ -1,12 +1,24 @@
 #header {
     .header__inner {
         position: relative;
+        @include max_768 {
+            &::before {
+                content: "";
+                position: fixed;
+                background: rgb(113 92 67 / 70%);
+                height: vw(140px);
+                width: 100%;
+                top: 0;
+                z-index: 3;
+            }
+        }
         .dh-left {
             position: absolute;
             top: 23px;
             left: 60px;
-            z-index: 2;
+            z-index: 4;
             @include max_768 {
+                position: fixed;
                 top: vw(35px);
                 left: 0;
                 right: 0;
@@ -30,6 +42,15 @@
             }
             @include max_768 {
                 display: none;
+            }
+            .headline {
+                font-size: 12px;
+                font-weight: normal;
+                text-align: center;
+                margin-bottom: 20px;
+                @include max_768 {
+                    display: none;
+                }
             }
             .table-schedule {
                 border-collapse: collapse;
@@ -199,12 +220,18 @@
             // height: 100vh;
             overflow: hidden;
             @include max_768 {
-                height: auto;
-                // max-height: 100vh;
+                height: 100vh;
             }
             .fv-main-hero__img {
+                @include max_768 {
+                    height: 100vh;
+                }
                 img {
                     width: 100%;
+                    @include max_768 {
+                        height: 100%;
+                        object-fit: cover;
+                    }
                 }
             }
         }
@@ -224,8 +251,8 @@
                 }
                 @include max_768 {
                     width: vw(507px);
-                    top: vw(221px);
-                    bottom: unset;
+                    // top: vw(221px);
+                    // bottom: unset;
                 }
             }
         }
@@ -297,15 +324,16 @@
             z-index: 2;
             left: 0;
             right: 0;
-            bottom: vw(-110px);
+            // bottom: vw(-110px);
             @include min_769 {
                 max-width: 1200px;
                 min-height: 120px;
                 bottom: -60px;
             }
-            @include res_768 {
+            @include max_768 {
                 margin-left: vw(30px);
                 margin-right: vw(30px);
+                transform: translateY(-50%);
             }
             &__inner {
                 display: flex;
@@ -405,6 +433,11 @@
                             background: #715c43;
                             font-family: $ff-watchwordbold;
                             color: #fff;
+                            &::after {
+                                @include min_769 {
+                                    right: -20px;
+                                }
+                            }
                             &::before {
                                 width: vw(16px);
                                 top: vw(4px);
@@ -499,7 +532,7 @@
                         @include resizefont(20px, 40px);
                         position: relative;
                         @media (max-width: 1199px) and (min-width: 992px) {
-                            font-size: 16px;
+                            font-size: 14px;
                         }
                         &::after {
                             content: '';
@@ -545,9 +578,9 @@
                             // &:first-of-type {
                             //     padding-left: 0;
                             // }
-                            // &:last-of-type {
-                            //     padding-right: 0;
-                            // }
+                            &:last-of-type {
+                                padding-right: 0;
+                            }
                         }
                         a {
                             @include min_769 {
@@ -567,15 +600,15 @@
                     @include dlflex;
                     align-items: center;
                     @include min_769 {
-                        width: 504px;
-                        margin-left: 28px;
+                        width: 564px;
+                        // padding-left: 60px;
                     }
                     @media screen and (max-width: 1680px) and (min-width: 769px) {
-                        width: 55%;
-                        margin-left: 2%;
+                        width: 50%;
+                        // padding-left: 2%;
                     }
                     @media screen and (max-width: 1024px) and (min-width: 769px) {
-                        width: 35%;
+                        width: 39%;
                     }
                     @include max_768 {
                         width: 100%;
@@ -605,16 +638,20 @@
                             @include dlflex;
                             align-items: center;
                             @include resizefont(20px, 40px);
+                            @include transition();
                             @include min_769 {
                                 letter-spacing: 1.4px;
-                                margin-left: 60px;
+                                // margin-left: 60px;
                                 padding-left: 76px;
                                 padding-top: 46px;
                                 padding-bottom: 46px;
+                                &:hover {
+                                    background-color: #5c4b36;
+                                }
                             }
                             @media screen and (max-width: 1680px) and (min-width: 769px) {
                                 padding-left: 15%;
-                                margin-left: 6%;
+                                // margin-left: 6%;
                                 font-size: 22px;
                             }
                             @media screen and (max-width: 1024px) and (min-width: 769px) {
@@ -659,6 +696,10 @@
                                     left: 20%;
                                 }
                             }
+                            @include max_768 {
+                                order: 0;
+                                width: 54.6666667%;
+                            }
                         }
                         .calendar {
                             @include dlflex;
@@ -680,7 +721,14 @@
                         }
                         &.hd-sub-ins {
                             @include min_769 {
-                                width: 25px;
+                                width: 145px;
+                                @include dlflexcenter;
+                                padding: 48px 0;
+                                &:hover {
+                                    height: 100%;
+                                    // width: 100%;
+                                    background-color: #5c4b36;
+                                }
                             }
                             @include max_768 {
                                 background-color: #c48a4b;
@@ -692,25 +740,31 @@
                                 }
                             }
                             @media screen and (max-width: 1680px) and (min-width: 769px) {
-                                width: 25px;
+                                width: 100px;
+                                padding: 45px 0;
                                 img {
                                     width: 100%;
                                 }
                             }
-                        }
-                        &.hd-sub-phone {
-                            @include max_768 {
-                                order: 0;
-                                width: 54.6666667%;
+                            @media screen and (max-width: 1024px) and (min-width: 769px) {
+                                padding: 39px 0;
                             }
                         }
                         &.dh-sub-calendar {
                             width: 100%;
                             @include min_769 {
                                 max-width: 120px;
+                                padding: 25px 0;
+                                &:hover {
+                                    background-color: #5c4b36;
+                                }
+                            }
+                            @media screen and (max-width: 1680px) and (min-width: 769px) {
+                                padding: 22px 0;
                             }
                             @media screen and (max-width: 1024px) and (min-width: 769px) {
                                 max-width: 26%;
+                                padding: 20px 0;
                             }
                             @include max_768 {
                                 order: 2;
