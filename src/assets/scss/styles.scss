@@ -431,6 +431,9 @@
             background: #fff;
         }
     }
+    .section__title-jp {
+        color: #fff;
+    }
     // .our-three-commit {
     //     // position: absolute;
     //     // top: 0;
@@ -847,6 +850,10 @@
                     position: relative;
                 }
             }
+        }
+        .carousel {
+            display: block;
+            position: relative;
         }
         .carousel.wrap {
             padding-top: 0;
@@ -1265,11 +1272,6 @@
             }
         }
     }
-}
-
-.carousel {
-    display: block;
-    position: relative;
 }
 
 // #pickup .paging.sp {
