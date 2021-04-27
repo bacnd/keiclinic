@@ -7,7 +7,7 @@
                 $this.slidershow();
                 $this.menutop();
                 $this.service();
-                // $this.feature();
+                $this.feature();
                 $this.animation();
             });
         },
@@ -93,27 +93,28 @@
             });
         },
 
-        // feature: function() {
-        //     var $win = $(window),
+        feature: function() {
+            var $win = $(window),
 
-        //     $boxFeature= $('.box-feature');
-        //     boxFeatureTop = $boxFeature.offset().top;
-        //     boxFeatureHeight = $boxFeature.outerHeight();
-        //     stopTop = boxFeatureHeight - $win.height();
+            $boxFeature= $('.box-feature');
+            boxFeatureTop = $boxFeature.offset().top;
+            boxFeatureHeight = $boxFeature.outerHeight();
+            stopTop = boxFeatureHeight - $win.height(),
+            headerSubpageHeight = $('.home #header_subpage').height();
         
-        //     $bnThreeCommit = $('.our-three-commit'),
-        //     bnThreeCommitHeight = $bnThreeCommit.outerHeight();
+            $bnThreeCommit = $('.our-three-commit'),
+            bnThreeCommitHeight = $bnThreeCommit.outerHeight();
             
-        //     $win.on('load scroll', function() {
-        //         var currentPos = $(this).scrollTop();
+            $win.on('load scroll', function() {
+                var currentPos = $(this).scrollTop();
 
-        //         if(currentPos < boxFeatureTop || boxFeatureTop < currentPos - stopTop - bnThreeCommitHeight) {
-        //             $bnThreeCommit.css({'position': 'absolute'});
-        //         } else {
-        //             $bnThreeCommit.css({'position': 'fixed'});
-        //         }
-        //     });
-        // },
+                if(currentPos < boxFeatureTop || boxFeatureTop < currentPos - stopTop - bnThreeCommitHeight - headerSubpageHeight) {
+                    $bnThreeCommit.css({'position': 'absolute', 'top': 34});
+                } else {
+                    $bnThreeCommit.css({'position': 'fixed', 'top': headerSubpageHeight});
+                }
+            });
+        },
 
         animation: function() {
             AOS.init({

@@ -156,7 +156,7 @@
                             @include dlflexcenter;
                             font-family: $ff-watchwordbold;
                             line-height: 1;
-                            @include resizefont(12px, 24px);
+                            @include resizefont(12px, 20px);
                             @include min_769 {
                                 width: 28px;
                                 height: 28px;
@@ -262,7 +262,7 @@
                     letter-spacing: 1.2px;
                     color: #715c43;
                     padding-left: vw(30px);
-                    @include resizefont(12px, 24px);
+                    @include resizefont(12px, 20px);
                     @include min_769 {
                         width: 244px;
                         padding-left: 72px;
@@ -393,20 +393,23 @@
 }
 
 .box-feature {
-    // padding-top: vw(43px);
-    // background-attachment: fixed;
-    // background-size: cover;
+    padding-top: vw(43px);
+    padding-bottom: vw(87px);
+    background: url('../images/bg-feature.jpg') center 0 no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     position: relative;
     overflow: hidden;
     @include min_769 {
         padding-bottom: 100px;
-        // padding-top: 108px;
+        padding-top: 108px;
     }
     .our-three-commit {
         position: absolute;
         top: 34px;
         right: 247px;
         z-index: 0;
+        @include transition();
         @media screen and (max-width: 1680px) and (min-width: 769px) {
             right: 7%;
             text-align: right;
@@ -415,7 +418,7 @@
             }
         }
         @include max_768 {
-            top: vw(104px);
+            top: vw(104px) !important;
             right: vw(22px);
             position: absolute !important;
             img {
@@ -463,14 +466,14 @@
         //     margin-top: 210px;
         // }
         .bg-box-feature {
-            background: url('../images/bg-feature.jpg') center 0 no-repeat;
-            background-size: cover;
-            padding-top: vw(43px);
+            // background: url('../images/bg-feature.jpg') center 0 no-repeat;
+            // background-size: cover;
+            // padding-top: vw(43px);
             position: relative;
             overflow: hidden;
             padding-bottom: vw(87px);
             @include min_769 {
-                padding-top: 108px;
+                // padding-top: 108px;
                 padding-bottom: 29px;
             }
         }
@@ -537,11 +540,16 @@
                         padding-left: 40px;
                         padding-top: 66px;
                     }
+                    @include max_768 {
+                        padding-right: vw(30px);
+                    }
                     .point__title {
                     }
                     .point__txt {
-                        max-width: 560px;
                         letter-spacing: 0.85px;
+                        @include min_769 {
+                            max-width: 560px;
+                        }
                     }
                     .btn-more {
                         color: #fff;
@@ -608,16 +616,6 @@
                             max-width: 527px;
                         }
                     }
-                    .btn-more {
-                        margin-top: vw(38px);
-                        font-family: $ff-primary;
-                        @include min_769 {
-                            margin-top: 35px;
-                        }
-                        &:hover {
-                            font-weight: bold;
-                        }
-                    }
                 }
             }
             &-3 {
@@ -665,6 +663,16 @@
                         @include min_769 {
                             max-width: 560px;
                             letter-spacing: 0.9px;
+                        }
+                    }
+                    .btn-more {
+                        margin-top: vw(38px);
+                        font-family: $ff-primary;
+                        @include min_769 {
+                            margin-top: 35px;
+                        }
+                        &:hover {
+                            font-weight: bold;
                         }
                     }
                 }
@@ -813,7 +821,7 @@
                 display: block;
                 font-family: $ff-watchwordregular;
                 margin-top: 2px;
-                @include resizefont(12px, 24px);
+                @include resizefont(12px, 20px);
             }
         }
     }
@@ -985,7 +993,7 @@
                 margin-bottom: 8.4%;
                 line-height: 1.89;
                 transform: none !important;
-                @include resizefont(12px, 24px);
+                @include resizefont(12px, 20px);
                 @include max_768 {
                     margin-bottom: 5.2%;
                     line-height: 1.9;
@@ -1013,7 +1021,7 @@
                 display: inline-block;
                 vertical-align: middle;
                 font-size: 18px;
-                @include resizefont(12px, 24px);
+                @include resizefont(12px, 20px);
                 &.all {
                     color: #2e2e2e;
                 }
@@ -1025,7 +1033,7 @@
                 padding-right: 0.36%;
                 font-size: 18px;
                 color: #2e2e2e;
-                @include resizefont(12px, 24px);
+                @include resizefont(12px, 20px);
             }
             .prev {
                 display: inline-block;
@@ -1137,9 +1145,15 @@
             @media screen and (max-width: 1024px) {
                 margin-top: vw(60px);
             }
-            .calendar__img {
-                img {
-                    width: 100%;
+            // .calendar__img {
+            //     img {
+            //         width: 100%;
+            //     }
+            // }
+            .calendar-iframe {
+                width: 100%;
+                @include min_769 {
+                    max-width: 656px;
                 }
             }
         }

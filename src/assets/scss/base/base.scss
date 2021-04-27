@@ -30,7 +30,7 @@ body {
 
     /* Non standard for WebKit */
     word-break: break-word;
-    @include resizefont(12px, 24px);
+    @include resizefont(12px, 20px);
     @include fixIE {
         -ms-word-break: inherit;
         word-break: inherit;
@@ -254,7 +254,7 @@ output:-moz-ui-invalid {
     border: solid 1px #715c43;
     font-family: $ff-watchwordregular;
     position: relative;
-    @include resizefont(12px, 24px);
+    @include resizefont(12px, 20px);
     @include min_769 {
         max-width: 297px;
         height: 60px;

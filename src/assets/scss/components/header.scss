@@ -375,7 +375,7 @@
                     line-height: 1.42;
                     letter-spacing: 1.2px;
                     color: #cc9240;
-                    @include resizefont(12px, 24px);
+                    @include resizefont(12px, 20px);
                     @include min_769 {
                         text-align: right;
                         width: 20.1%;
@@ -385,7 +385,7 @@
                 }
                 &__title {
                     line-height: 1.42;
-                    @include resizefont(12px, 24px);
+                    @include resizefont(12px, 20px);
                     margin-top: vw(9px);
                     @include min_769 {
                         padding-left: 47px;
@@ -412,7 +412,7 @@
                     .btn-more {
                         width: vw(188px);
                         height: vw(61px);
-                        @include resizefont(12px, 24px);
+                        @include resizefont(12px, 20px);
                         @include min_769 {
                             width: 122px;
                             height: 40px;
@@ -741,7 +741,7 @@
                             }
                             @media screen and (max-width: 1680px) and (min-width: 769px) {
                                 width: 100px;
-                                padding: 45px 0;
+                                padding: 44px 0;
                                 img {
                                     width: 100%;
                                 }

@@ -188,7 +188,7 @@ footer {
                             font-size: 18px;
                             font-weight: bold;
                             width: 100%;
-                            @include resizefont(12px, 24px);
+                            @include resizefont(12px, 20px);
                             th,
                             td {
                                 text-align: center;
@@ -233,7 +233,7 @@ footer {
                                         @media (max-width: 1199px) and (min-width: 769px) {
                                             font-size: 18px;
                                         }
-                                        @include resizefont(12px, 24px);
+                                        @include resizefont(12px, 20px);
                                     }
                                 }
                             }
@@ -299,7 +299,7 @@ footer {
                         letter-spacing: 1.2px;
                         color: #2e2e2e;
                         margin-top: vw(29px);
-                        @include resizefont(12px, 24px);
+                        @include resizefont(12px, 20px);
                         @include min_769 {
                             margin-top: 29px;
                         }
@@ -322,7 +322,7 @@ footer {
                             position: relative;
                             margin-left: vw(20px);
                             padding-left: vw(20px);
-                            @include resizefont(12px, 24px);
+                            @include resizefont(12px, 20px);
                             @include min_769 {
                                 margin-left: 21px;
                                 padding-left: 18px;
