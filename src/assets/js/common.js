@@ -108,7 +108,7 @@
             $win.on('load scroll', function() {
                 var currentPos = $(this).scrollTop();
 
-                if(currentPos < boxFeatureTop || boxFeatureTop < currentPos - stopTop - bnThreeCommitHeight) {
+                if(currentPos < boxFeatureTop || boxFeatureTop < currentPos - stopTop) {
                     $bnThreeCommit.css({'position': 'absolute', 'top': 34});
                 } else {
                     $bnThreeCommit.css({'position': 'fixed', 'top': headerSubpageHeight});
