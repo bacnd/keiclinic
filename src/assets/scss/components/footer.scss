@@ -103,8 +103,8 @@ footer {
                                 width: 1px;
                                 background-color: #715c43;
                                 @include min_769 {
-                                    top: 0;
-                                    height: calc(100% - 9px);
+                                    top: 10px;
+                                    height: calc(100% - 7px);
                                 }
                             }
                         }

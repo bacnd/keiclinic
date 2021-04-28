@@ -121,13 +121,15 @@
             var header = $('.page #header'),
             header_offset = header.offset(),
             header_height = header.height();
-            $(window).on('load scroll', function() {
-                if($(window).scrollTop() > header_offset.top + header_height) {
-                    header.addClass('is-fixed');
-                } else {
-                    header.removeClass('is-fixed');
-                }
-            });
+            if(header[0]) {
+                $(window).on('load scroll', function() {
+                    if($(window).scrollTop() > header_offset.top + header_height) {
+                        header.addClass('is-fixed');
+                    } else {
+                        header.removeClass('is-fixed');
+                    }
+                });
+            }
         },
     }.init());
 }(jQuery));
