@@ -34,8 +34,11 @@ footer {
                         margin-bottom: vw(41px);
                         padding-left: 0;
                         text-align: center;
-                        img {
-                            width: vw(346px);
+                    }
+                    img {
+                        width: vw(346px);
+                        @include min_769 {
+                            width: 259px;
                         }
                     }
                     a {
