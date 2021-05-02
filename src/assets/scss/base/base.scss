@@ -291,7 +291,7 @@ output:-moz-ui-invalid {
         opacity: 1;
         &::after {
             @include min_769 {
-                right: -30px;
+                right: -35px;
             }
         }
         &::before {

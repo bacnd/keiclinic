@@ -442,7 +442,7 @@
                             color: #fff;
                             &::after {
                                 @include min_769 {
-                                    right: -20px;
+                                    right: -25px;
                                 }
                             }
                             &::before {
@@ -591,9 +591,9 @@
                             // &:first-of-type {
                             //     padding-left: 0;
                             // }
-                            &:last-of-type {
-                                padding-right: 0;
-                            }
+                            // &:last-of-type {
+                            //     padding-right: 0;
+                            // }
                         }
                         a {
                             @include min_769 {

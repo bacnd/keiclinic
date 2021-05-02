@@ -411,6 +411,7 @@ footer {
                     }
                     @media screen and (min-width: 414px) and (max-width: 768px) {
                         width: 50%;
+                        padding: vw(12px) 0;
                     }
                     a {
                         line-height: 1.89;
@@ -425,12 +426,16 @@ footer {
                 letter-spacing: 0.8px;
                 color: rgba(255, 255, 255, 0.3);
                 padding-top: vw(49px);
-                padding-bottom: vw(52px);
+                padding-bottom: vw(65px);
                 @include resizefont(12px, 20px);
                 @include min_769 {
                     border-top: 1px solid rgb(255 255 255 / 30%);
                     padding-top: 20px;
                     padding-bottom: 22px;
+                }
+                @media screen and (max-width: 768px) and (min-width: 414px) {
+                    padding-top: vw(25px);
+                    padding-bottom: vw(25px);
                 }
             }
         }
@@ -440,7 +445,13 @@ footer {
             right: 167px;
             z-index: 9;
             @include max_768 {
-                display: none !important;
+                // display: none !important;
+                bottom: vw(10px);
+                right: vw(40px);
+                img {
+                    width: vw(100px);
+                    // height: vw(100px);
+                }
             }
             @media screen and (max-width: 1566px) and (min-width: 769px) {
                 right: 0;
