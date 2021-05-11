@@ -517,6 +517,7 @@
                 .hd-sub__right {
                     @include dlflex;
                     align-items: center;
+                    overflow: hidden;
                     @include max_768 {
                         flex-direction: column;
                         width: 100%;
@@ -540,7 +541,8 @@
                         justify-content: flex-end;
                     }
                     .hd-sub__item {
-                        padding: 10px 32px 10px;
+                        // padding: 10px 32px 10px;
+                        // padding: 47px 32px;
                         letter-spacing: 1px;
                         @include resizefont(20px, 40px);
                         position: relative;
@@ -550,7 +552,7 @@
                         &::after {
                             content: '';
                             position: absolute;
-                            bottom: 0;
+                            bottom: -10px;
                             left: vw(150px);
                             margin: auto;
                             background-color: #e3a621;
@@ -596,6 +598,11 @@
                             // }
                         }
                         a {
+                            padding: 47px 32px 48px;
+                            @media screen and (max-width: 1680px) and (min-width: 769px) {
+                                padding-left: 0;
+                                padding-right: 0;
+                            }
                             @include min_769 {
                                 color: #fff;
                             }
@@ -656,7 +663,7 @@
                                 letter-spacing: 1.4px;
                                 // margin-left: 60px;
                                 padding-left: 76px;
-                                padding-top: 46px;
+                                padding-top: 47px;
                                 padding-bottom: 46px;
                                 &:hover {
                                     background-color: #5c4b36;
@@ -760,14 +767,14 @@
                                 }
                             }
                             @media screen and (max-width: 1024px) and (min-width: 769px) {
-                                padding: 39px 0;
+                                padding: 41px 0;
                             }
                         }
                         &.dh-sub-calendar {
                             width: 100%;
                             @include min_769 {
                                 max-width: 120px;
-                                padding: 25px 0;
+                                padding: 26px 0 25px;
                                 &:hover {
                                     background-color: #5c4b36;
                                 }
@@ -777,7 +784,7 @@
                             }
                             @media screen and (max-width: 1024px) and (min-width: 769px) {
                                 max-width: 26%;
-                                padding: 20px 0;
+                                padding: 21px 0;
                             }
                             @include max_768 {
                                 order: 2;

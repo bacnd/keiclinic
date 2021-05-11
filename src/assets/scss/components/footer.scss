@@ -16,6 +16,9 @@ footer {
                     padding-top: 102px;
                     padding-bottom: 45px;
                 }
+                @media screen and (min-width: 769px) and (max-width: 1200px) {
+                    padding-left: 2%;
+                }
                 &__inner {
                     width: 100%;
                     margin-left: auto;
@@ -372,6 +375,9 @@ footer {
                 width: 100%;
                 @include min_769 {
                     width: 50%;
+                }
+                @media screen and (min-width: 769px) and (max-width: 1200px) {
+                    padding-left: 2%;
                 }
                 #map {
                     height: vw(800px);

@@ -554,6 +554,9 @@
                     @include max_768 {
                         padding-right: vw(30px);
                     }
+                    @media screen and (min-width: 769px) and (max-width: 1200px) {
+                        padding-right: 2.5%;
+                    }
                     .point__title {
                     }
                     .point__txt {
@@ -660,6 +663,9 @@
                         margin-top: vw(-33px);
                         padding-right: vw(30px);
                     }
+                    @media screen and (min-width: 769px) and (max-width: 1200px) {
+                        padding-right: 2.5%;
+                    }
                     .point__num {
                         @include min_769 {
                             max-width: 560px;
@@ -725,7 +731,7 @@
                         padding-left: 11%;
                     }
                     @media screen and (max-width: 1200px) and (min-width: 769px) {
-                        padding-left: 1%;
+                        padding-left: 2.5%;
                     }
                     .point__num {
 
@@ -966,6 +972,7 @@
             }
             @media screen and (max-width: 1200px) and (min-width: 769px) {
                 padding-right: 52%;
+                padding-left: 54.5%;
             }
             .case-wrap {
                 position: relative;
@@ -1180,6 +1187,11 @@
                 .calendar-iframe {
                     max-width: 100%;
                 }
+            }
+            @media screen and (min-width: 769px) and (max-width: 1200px) {
+                margin-left: 2%;
+                margin-right: 2%;
+                width: calc(100% - 4%) !important;
             }
         }
         @media screen and (max-width: 1024px) {
