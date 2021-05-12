@@ -552,7 +552,7 @@
                         &::after {
                             content: '';
                             position: absolute;
-                            bottom: -10px;
+                            bottom: 0;
                             left: vw(150px);
                             margin: auto;
                             background-color: #e3a621;
@@ -563,6 +563,7 @@
                             -moz-transition: opacity 0.6s;
                             transition: opacity 0.6s;
                             @include min_769 {
+                                bottom: -10px;
                                 left: 0;
                                 right: 0;
                                 height: 2px;
@@ -598,12 +599,12 @@
                             // }
                         }
                         a {
-                            padding: 47px 32px 48px;
                             @media screen and (max-width: 1680px) and (min-width: 769px) {
                                 padding-left: 0;
                                 padding-right: 0;
                             }
                             @include min_769 {
+                                padding: 47px 32px 48px;
                                 color: #fff;
                             }
                         }
