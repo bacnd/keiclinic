@@ -599,13 +599,13 @@
                             // }
                         }
                         a {
-                            @media screen and (max-width: 1680px) and (min-width: 769px) {
-                                padding-left: 0;
-                                padding-right: 0;
-                            }
                             @include min_769 {
                                 padding: 47px 32px 48px;
                                 color: #fff;
+                            }
+                            @media screen and (max-width: 1680px) and (min-width: 769px) {
+                                padding-left: 0;
+                                padding-right: 0;
                             }
                         }
                         &.current-menu-item,
