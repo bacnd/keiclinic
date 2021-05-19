@@ -35,8 +35,19 @@
                 return false;
             });
 
-            $('.drawer-toggle').click(function() {
-                $('body').toggleClass('drawer-open');
+            $('.drawer-toggle, #header_subpage .calendar').click(function() {
+                if($('body').hasClass('drawer-open')){
+					$('body').removeClass('drawer-open');
+				} else {
+					$('body').addClass('drawer-open');
+				}
+            });
+
+            $('#header_subpage .dh-sub-calendar .calendar').click(function(e) {
+                e.preventDefault();
+                const logoH = $('.dh-left .logo').height() * 2.8;
+                var aid = $(this).attr("href");
+                $('html, body').animate({scrollTop: $(aid).offset().top - logoH }, 2000);
             });
         },
 
